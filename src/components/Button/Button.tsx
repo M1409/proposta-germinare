@@ -10,7 +10,7 @@ export default function Button({content,...props}:ButtonProps){
 
 
     return (
-        <button  {...props} className='button-outlined'> 
+        <button  {...props} className='button-filled'> 
             {content}
         </button>
     )
