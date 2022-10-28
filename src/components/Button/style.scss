@@ -1,7 +1,14 @@
 .button-outlined {
     background: #FFFFFF;
-    border: 1.5px solid #011689;
+    border: 2.5px solid #011689;
     border-radius: 8px;
     width: 127px;
     height: 44px;
+    font-family: 'Montserrat', sans-serif;
+    color: #011689;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
 }
+
