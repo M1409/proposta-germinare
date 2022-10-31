@@ -1,13 +1,12 @@
 import './style.scss'
 
 export type TypographyProps = {
-    content?:string
     variant?: 'typography-paragraph' | 'typography-subtitle' | 'typography-title'
-}
+}   & React.DetailedHTMLProps<React.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>
 
 
-export function Typography({content,variant,...props}:TypographyProps){
+export function Typography({children,variant,...props}:TypographyProps){
     return (
-        <p {...props} className = {variant}> {content} </p>
+        <p {...props} className = {variant}> {children} </p>
     )
 }
