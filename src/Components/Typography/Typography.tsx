@@ -1,4 +1,4 @@
-import './style'
+import './style.scss'
 
 export type TypographyProps = {
     content?:string

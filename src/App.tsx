@@ -5,7 +5,7 @@ import { Typography } from './Components/Typography/index';
 function App() {
   return (
     <div className="App">
-      <Typography/>
+      <Typography content='lorem' variant='typography-paragraph'/>
     </div>
   );
 }
