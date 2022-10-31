@@ -1,23 +1,15 @@
-import './style.scss'
 
+import './style.scss'
 
 export type ButtonProps = {
     content: string
-    variant: "filled" | "outlined"
-} //& Parameters<typeof HTMLButtonElement[0]>
+    variant: "button-filled" | "button-filled-tech" | "button-outlined" 
+} 
 
 export default function Button({ content, variant, ...props }: ButtonProps) {
 
     return (
-        variant === 'filled' ?
-
-            <button  {...props} className='button-filled'>
-                {content}
-            </button>
-
-            :
-
-            <button  {...props} className='button-outlined'>
+            <button  {...props} className={variant}>
                 {content}
             </button>
     )
