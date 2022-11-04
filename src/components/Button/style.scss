@@ -64,18 +64,3 @@ button {
         }
     }
 }
-
-.tech {
-    background-color: #4ACD7C;
-    color: #000000;
-
-    &:before {
-        background-color: darken(#4ACD7C, 15%);
-    }
-
-    &:hover {
-        &:before {
-            width: 100%;
-        }
-    }
-}
