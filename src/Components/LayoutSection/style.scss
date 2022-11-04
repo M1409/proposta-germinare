@@ -4,16 +4,14 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover ;
+}
 
-    &:before{
-        background-color: #011689;
-        content: '';
+.LayoutSection span {
         display: block;
         height: 100%;
         position: absolute;
         width: 100%;
         opacity: 0.8;
-    }
 }
 
 .LayoutSection div{

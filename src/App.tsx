@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <LayoutSection   height = '600px' src = {img} > 
+      <LayoutSection   height = '600px' src = {img} color = 'red' > 
           <p style = {{color: 'white'}}> Texto Teste</p>
       </LayoutSection>
 
