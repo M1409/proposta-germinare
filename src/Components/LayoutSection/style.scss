@@ -1,4 +1,4 @@
-.LayoutSection {
+.layout-section {
     opacity: 1;
     width: 100vw;
     position: relative;
@@ -6,7 +6,7 @@
     background-size: cover ;
 }
 
-.LayoutSection span {
+.layout-section span {
         display: block;
         height: 100%;
         position: absolute;
@@ -14,7 +14,7 @@
         opacity: 0.8;
 }
 
-.LayoutSection div{
+.layout-section div{
     display: flex;
     flex-direction: column;
     justify-content: center;
