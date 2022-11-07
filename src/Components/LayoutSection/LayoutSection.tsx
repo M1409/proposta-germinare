@@ -2,7 +2,7 @@ import './style.scss'
 import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react'
 
 export type LayoutSectionProps = {
-    src?: string
+    src: string
     height?: string
     color?: string
 } &  DetailedHTMLProps<ButtonHTMLAttributes<HTMLDivElement>, HTMLDivElement>
