@@ -7,18 +7,14 @@
 }
 
 .layout-section span {
-        display: block;
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        opacity: 0.8;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    opacity: 0.8;
 }
 
 .layout-section div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     z-index: 1;
 }
