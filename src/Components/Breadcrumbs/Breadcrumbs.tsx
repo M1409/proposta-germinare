@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 import { useRouter } from "../../hooks/useRouter";
 
 export type BreadcrumbsProps = {
-
+    crumbColor: string
 }
 
-export function Breadcrumbs() {
+export function Breadcrumbs({crumbColor, ...props}:BreadcrumbsProps) {
 
     const [routes] = useRouter()
 
     function returnTest(item:any){
+        let crumb = '|'
+        let color = 'inherit'
         if (routes.indexOf(item) === routes.length - 1){
-            return <p> {item.label} / </p>
+            crumb = ''
+            color = crumbColor
         }
-
-        else{
-            return <p> {item.label} </p>
-        }
+        return <Link to = {item.href} style = {{textDecoration: 'none', color: color}}> {item.label + ' ' + crumb} </Link>
     }
 
     return (

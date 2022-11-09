@@ -15,9 +15,9 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
-          <Route path="/cleber/jorge" element = {<Breadcrumbs/>}>
+          <Route path="/cleber/jorge/jorjao" element = {<Breadcrumbs crumbColor="red"/>}>
           </Route>
-          <Route path="/" element = {<Breadcrumbs/>}>
+          <Route path="/" element = {<Breadcrumbs crumbColor=""/>}>
           </Route>
         </Routes>
     </Router>
