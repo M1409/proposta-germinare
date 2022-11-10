@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# O que preciso saber antes de começar?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Seja bem vindo ao repositório: `proposta-germinare` :rocket:
 
-## Available Scripts
+Antes de começar, vamos repassar algumas regras importantes para poder subir sua contribuição para esse repositório.
 
-In the project directory, you can run:
+## Padrão de commit
 
-### `npm start`
+Sinta-se em casa, mas lembre que não está! :smiling_imp::smiling_imp:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Por isso, deixe tudo organizado assim como você encontrou. Seguimos o padrão commitlint do Google, então nomes de Branchs e Pull Requests precisam ser identificadas com algum prefixo abaixo:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  ```
+    'build',
+    'chore',
+    'ci',
+    'docs',
+    'feat',
+    'fix',
+    'perf',
+    'refactor',
+    'revert',
+    'style',
+    'test'
+  ``` 
+Siga também a descrição do card e voilá, você está seguindo boas prática. Exemplo de como fazemos:
 
-### `npm test`
+`feat/germinare/001/button-component`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Padrão de revisão 
 
-### `npm run build`
+Todo código deve ser revisado por algum colega, seguindo os pilares do `Clean Code`. Por isso, se você está validando, precisa ponderar todos os campos abaixo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Padrão a ser seguido | Descrição | Avaliação | Ponto de Melhoria | 
+| --- | --- | --- | --- |
+| **KISS** | 'Keep it Simple Stupid'. O código está o mais simples possível, sem complexidades desnecessárias? | :white_check_mark: ou :x: | |
+| **DRY** | 'Don't Repeat Yourself'. O código poderia ser componentizado ou repetido menos vezes? Existe algo que se repete e que poderia não ser ambíguo?  | :white_check_mark: ou :x: | |
+| **YAGNI** | 'You Aren't Gonna Need It'. A funcionalidade ou biblioteca é realmente necessária para construir o que foi pedido?  | :white_check_mark: ou :x: | |
+| **Favor readability** | Ao ler o código, é possível entender facilmente o que está acontecendo? As variáveis estão bem explicadas? | :white_check_mark: ou :x: | |
+| **Practice consistency** | O código seguiu o padrão do restante do projeto? | :white_check_mark: ou :x: | |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+:space_invader: Bom Coding!!! :space_invader:
