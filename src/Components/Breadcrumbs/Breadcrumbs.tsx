@@ -1,26 +1,28 @@
 import { Link } from "react-router-dom";
 import { useRouter } from "../../hooks/useRouter";
+import './Breadcrumbs.module.scss'
 
 export type BreadcrumbsProps = {
     crumbColor: string
+    crumbInitialColor: string
 }
 
-export function Breadcrumbs({crumbColor, ...props}:BreadcrumbsProps) {
+export function Breadcrumbs({crumbColor,crumbInitialColor, ...props}:BreadcrumbsProps) {
 
     const [routes] = useRouter()
 
     function returnTest(item:any){
         let crumb = '|'
-        let color = 'inherit'
+        let color = crumbInitialColor
         if (routes.indexOf(item) === routes.length - 1){
             crumb = ''
             color = crumbColor
         }
-        return <Link to = {item.href} style = {{textDecoration: 'none', color: color}}> {item.label + ' ' + crumb} </Link>
+        return <Link className="crumbs" to = {item.href} style = {{textDecoration: 'none', color: color}}> {item.label + ' ' + crumb} </Link>
     }
 
     return (
-        <div>
+        <div {...props}>
             {routes.map(item => (
                 returnTest(item)
             ))}
