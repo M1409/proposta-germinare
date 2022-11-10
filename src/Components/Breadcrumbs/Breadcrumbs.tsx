@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useRouter } from "../../hooks/useRouter";
 import './Breadcrumbs.module.scss'
+import { PathType } from "../../hooks/useRouter";
 
 export type BreadcrumbsProps = {
     crumbColor: string
@@ -11,7 +12,7 @@ export function Breadcrumbs({crumbColor,crumbInitialColor, ...props}:Breadcrumbs
 
     const [routes] = useRouter()
 
-    function returnTest(item:any){
+    function returnTest(item:PathType){
         let crumb = '|'
         let color = crumbInitialColor
         if (routes.indexOf(item) === routes.length - 1){

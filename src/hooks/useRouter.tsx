@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
-type Path = {
+export type PathType = {
     href: string
     label: string
 }
@@ -10,7 +10,7 @@ export function useRouter(){
 
     const router = useLocation()
     const pathList = useMemo(()=> {
-        const paths:Path[] = []
+        const paths:PathType[] = []
         let pathing = ''
         if (router.pathname !== '/'){
         router.pathname.slice(1, router.pathname.length).split('/').forEach(path => {
