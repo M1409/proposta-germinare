@@ -2,3 +2,6 @@
 //for more extensions, please just edit this file.
 declare module '*.jpg';
 declare module '*.png';
+declare module '*.scss';
+declare module '*.jpeg'
+declare module '*.JPG'

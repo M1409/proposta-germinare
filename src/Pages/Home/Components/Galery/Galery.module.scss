@@ -1,0 +1,44 @@
+.galeryContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+
+}
+.galeryItem{
+    position: relative;
+    overflow: hidden;
+    width: 40vmin;
+    height: 35vmin;
+    img{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;  
+     transition: all .3s ease-out; 
+    }
+    .titleContainer{
+        background-color: #040e4b;
+        height: 20%;
+        width: calc(100% - 10px);
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        position: absolute;
+        bottom: -14%;
+        transition: bottom .4s ease-out;
+    }
+}
+.galeryItem:hover .titleContainer{
+    bottom: 0;
+}
+.galeryItem:hover img{
+    top: -20px;
+}
+@media screen and (max-width: 670px){
+    .galeryItem{
+        width: 60vmin;
+        height: 55vmin;
+    }
+}
