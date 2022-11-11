@@ -5,3 +5,4 @@ declare module '*.png';
 declare module '*.scss';
 declare module '*.jpeg'
 declare module '*.JPG'
+declare module '*.svg'

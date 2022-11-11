@@ -1,22 +1,28 @@
+import LightGallery from 'lightgallery/react';
+import 'lightgallery/scss/lightgallery.scss';
+import 'lightgallery/scss/lg-zoom.scss';
 import img from '../../Assets/img1.jpeg'
-import img2 from '../../Assets/img2.png'
-import img3 from '../../Assets/img3.JPG'
-import img4 from '../../Assets/img4.JPG'
-import img5 from '../../Assets/img5.JPG'
 import styles from './Galery.module.scss'
 import { Typography } from '../../../../Components/Typography'
+import lgZoom from 'lightgallery/plugins/zoom';
+import ifull_screen from '../../Assets/ifull_screen.svg'
 export default function Galery(){
     const galery = [{image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}]
     return(
         <div className={styles.galeryContainer}>
-        {galery.map((item)=>(
-            <div className={styles.galeryItem}>
-                <img src={item.image} alt="" />
-                <div className={styles.titleContainer}>
-                    <Typography color='white'>{item.title}</Typography>
-                </div>
-            </div>
-        ))}
+        <LightGallery mode="lg-fade"  plugins={[lgZoom]} download={false}>
+            {galery.map((item)=>(
+                <a data-src={item.image} data-sub-html={`<h4>${item.title}</h4> <p> Instituto Germinare - Escola de Negócios`}>
+                    <div className={styles.galeryItem}>
+                        <img src={item.image} alt="" className={styles.mainImage}/>
+                        <div className={styles.titleContainer}>
+                            <Typography color='white'>{item.title}</Typography>
+                        </div>
+                        <img src={ifull_screen} alt="" className={styles.fullScreen}/>
+                    </div>
+                </a>
+            ))}
+        </LightGallery>
         </div>
     )
 }
