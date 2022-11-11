@@ -1,1 +1,1 @@
-export * from './WelcomeHome'
+export * from './WelcomeBanner'
