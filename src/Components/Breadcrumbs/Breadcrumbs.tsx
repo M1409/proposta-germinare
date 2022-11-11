@@ -12,7 +12,7 @@ export function Breadcrumbs({crumbColor,crumbInitialColor, ...props}:Breadcrumbs
 
     const [routes] = useRouter()
 
-    function returnTest(item:PathType){
+    function returnCrumb(item:PathType){
         let crumb = '|'
         let color = crumbInitialColor
         if (routes.indexOf(item) === routes.length - 1){
@@ -25,7 +25,7 @@ export function Breadcrumbs({crumbColor,crumbInitialColor, ...props}:Breadcrumbs
     return (
         <div {...props}>
             {routes.map(item => (
-                returnTest(item)
+                returnCrumb(item)
             ))}
         </div>
     )
