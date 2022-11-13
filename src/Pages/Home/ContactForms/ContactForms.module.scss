@@ -1,0 +1,49 @@
+$horizontalPadding: 60px;
+.container{
+    display: flex;
+    width: calc(100% - ($horizontalPadding * 2));
+    padding: 0 $horizontalPadding;
+    img{
+        max-width: 40%;
+    }
+    justify-content: space-between;
+    margin-top: 40px;
+}
+form{
+    width: calc(100% - ($horizontalPadding * 2) - 40%);
+    display: flex;
+    flex-direction: column;
+    span{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    padding-top: 40px;
+    justify-content: space-around;
+    span{
+        display: block;
+    }
+    input, textarea{
+        height: 26px;
+        margin-top: 8px;
+        width: 100%;
+        border-radius: 2px;
+        border: 2px solid #B6B6B6;
+        padding-left: 10px;
+        outline: none;
+    }
+    input:focus, textarea:focus{
+        border-color: #272727;
+    }
+    input::placeholder, textarea::placeholder{
+        color: #B1B1B1;
+        font-weight: 500;
+    
+    }
+    gap: 15px;
+    textarea{
+        height: 120px;
+        resize: none;
+        padding-top: 12px;
+    }
+
+}
