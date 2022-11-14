@@ -10,7 +10,7 @@ export type LayoutSectionProps = {
 export function LayoutSection({children, src, color, height, ...props}:LayoutSectionProps){
 
     return (
-        <div className='layout-section' style = {{backgroundImage: ` url(${src})`,height: height}} {...props}>
+        <div className='layout-section' style = {{backgroundImage: ` url(${src})`, height: height}} {...props}>
             <span style = {{backgroundColor: color}}>
                 <div>
                     {children}
