@@ -12,13 +12,13 @@ export default function Galery(){
         <div className={styles.galeryContainer}>
         <LightGallery mode="lg-fade"  plugins={[lgZoom]} download={false}>
             {galery.map((item)=>(
-                <a data-src={item.image} data-sub-html={`<h4>${item.title}</h4> <p> Instituto Germinare - Escola de Negócios`}>
+                <a data-src={item.image} data-sub-html={`<h4>${item.title}</h4> <p> Instituto Germinare - Escola de Negócios</p>`}>
                     <div className={styles.galeryItem}>
-                        <img src={item.image} alt="" className={styles.mainImage}/>
+                        <img src={item.image} alt={`${item.title}`} className={styles.mainImage}/>
                         <div className={styles.titleContainer}>
                             <Typography color='white'>{item.title}</Typography>
                         </div>
-                        <img src={ifull_screen} alt="" className={styles.fullScreen}/>
+                        <img src={ifull_screen} alt="Tela cheia" className={styles.fullScreen}/>
                     </div>
                 </a>
             ))}
