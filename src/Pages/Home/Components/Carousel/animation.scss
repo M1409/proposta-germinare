@@ -1,0 +1,26 @@
+@keyframes typographyMovement{
+    from{
+        transform: translateX(90%);
+            opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+            opacity: 1;
+    }
+}
+@keyframes buttonMovement{
+    from{
+        transform: translateY(400%);
+            opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+            opacity: 1;
+    }
+}
+.animation-typography{
+    animation: typographyMovement 3s;
+}
+.animation-button{
+    animation: buttonMovement 3s;
+}
