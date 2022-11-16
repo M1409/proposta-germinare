@@ -4,14 +4,13 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    background-position:center;
 }
 
 .LayoutSection span {
     display: block;
     height: 100%;
     position: absolute;
-    width: 100%;
-    
+    width: 100vw
 }
 
