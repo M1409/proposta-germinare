@@ -4,7 +4,10 @@ $horizontalPadding: 60px;
     width: calc(100% - ($horizontalPadding * 2));
     padding: 0 $horizontalPadding;
     img{
-        max-width: 40%;
+        width: 42%;
+        height: 42%;
+        margin: auto 0;
+
     }
     justify-content: space-between;
     margin-top: 40px;
@@ -23,13 +26,15 @@ form{
         display: block;
     }
     input, textarea{
-        height: 26px;
+        height: 40px;
         margin-top: 8px;
-        width: 100%;
+        width: calc(100% - 8px);
         border-radius: 2px;
         border: 2px solid #B6B6B6;
         padding-left: 10px;
         outline: none;
+        padding: 0;
+        padding-left: 8px;
     }
     input:focus, textarea:focus{
         border-color: #272727;
@@ -44,6 +49,40 @@ form{
         height: 120px;
         resize: none;
         padding-top: 12px;
+        font-family: 'Montserrat', sans-serif;
     }
 
+}
+#btn{
+    max-width: 127px;
+    max-height: 50px;
+    align-self: self-end;
+}
+#errorMessage{
+    color: #bf1650;
+    margin-top: 5px;
+}
+@media screen and (max-width: 960px) {
+    .container{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        img{
+            width: 42%;
+            height: 42%;
+        }
+    }
+    form{
+        width: 60%;
+    }
+    @media screen and (max-width: 670px) {
+        .container img {
+            width: 62%;
+            height: 62%;
+        }
+        form{
+            width: 80%;
+        }
+    }
 }
