@@ -7,9 +7,9 @@ import './WelcomeBanner.module.scss'
 export function WelcomeBanner(){
     return (
         <>
-        <LayoutSection src = {img} height = '569px'>
+        <LayoutSection src = {img} height = '569px' >
             
-            <Typography variant="typography-title" color = "white" style={{position: 'relative', zIndex: '10'}}> Conheça mais sobre o projeto acadêmico! </Typography>
+            <Typography variant="typography-title" color = "white"> Conheça mais sobre o projeto acadêmico! </Typography>
         </LayoutSection>
 
         </>
