@@ -1,9 +1,9 @@
+import { WhiteCard } from "./Components/WhiteCard";
 
-import Home from "./Pages/Home/Home";
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Home></Home>
+      <WhiteCard/>
     </div>
 
   );
