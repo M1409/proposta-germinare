@@ -1,18 +1,23 @@
 import { LayoutSection } from "../LayoutSection"
 import { Typography } from "../Typography"
-import img from './img.png'
-import './WelcomeBanner.module.scss'
+import styles from './WelcomeBanner.module.scss'
+import { Breadcrumbs } from "../Breadcrumbs"
+
+export type WelcomeBannerProps = {
+    crumbColor:string
+    bannerHeight:string
+    bannerSrc:string
+    titleWidth: string
+}
 
 
-export function WelcomeBanner(){
+export function WelcomeBanner({crumbColor,bannerHeight,bannerSrc,titleWidth,...props}:WelcomeBannerProps) {
     return (
-        <>
-        <LayoutSection src = {img} height = '569px' >
-            
-            <Typography variant="typography-title" color = "white"> Conheça mais sobre o projeto acadêmico! </Typography>
+        <LayoutSection src={bannerSrc} height={bannerHeight} {...props} >
+            <div className={styles.WelcomeContainer}>
+                <Typography variant="TypographyTitle" color="white" width={titleWidth}> Conheça mais sobre o projeto acadêmico! </Typography>
+                <Breadcrumbs crumbColor={crumbColor} crumbInitialColor="white" />
+            </div>
         </LayoutSection>
-
-        </>
-
     )
 }
