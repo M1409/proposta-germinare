@@ -18,6 +18,7 @@ $border: 30px;
         font-weight: 300;
         margin-top: 18px;
         line-height: 24px;
+        margin-bottom: 12px;
     }
 }
 .posFooter{
@@ -29,7 +30,7 @@ $border: 30px;
 }
 .mainContainer{
     width: 100%;
-    margin-top: calc($padding-left / $divisor);
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -49,10 +50,13 @@ $border: 30px;
 }
 @include mainStyle(7%, 2);
 @media screen and (max-width: 690px){
-    @include mainStyle(2%, 0.2);
+    @include mainStyle(2%, 0.4);
     @media screen and (max-width: 621px){
         .mainContainer{
+            min-height: 300px;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             div:first-child{
                 padding: 0 20px;
                 p{
@@ -67,6 +71,7 @@ $border: 30px;
         .socialContainer{
             margin-top: 50px;
             margin-bottom: 12px;
+            max-width: 40%;
         }
         #titleLine{
             display: none;
