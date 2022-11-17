@@ -2,7 +2,7 @@ import styles from './Carousel.module.scss'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import bg from '../../Assets/Images/bg.png'
+import bg from './Assets/Images/bg.png'
 import { Typography } from '../../../../Components/Typography';
 import Button from '../../../../Components/Button/Button';
 import c2 from './Assets/Images/c2.png'
