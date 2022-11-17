@@ -1,9 +1,8 @@
-
-import Home from "./Pages/Home/Home";
-function App() {
+import Governance from "./Pages/Governance/Governance";
+export default function App() {
   return (
     <div className="App">
-      <Home></Home>
+      <Governance/>
     </div>
 
   );

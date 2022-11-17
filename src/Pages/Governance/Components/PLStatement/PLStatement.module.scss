@@ -1,0 +1,40 @@
+.PLStatementContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.PLStatementDocuments{
+    display: flex;
+    flex-direction: column;       
+    margin-bottom: 30px;
+}
+
+.PLStatementLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.PLStatementText{
+    width: 80px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #2E3092;
+    padding: 5px;
+    text-align: center;
+}
+
+.PLStatement-img{
+    width: 28px;
+    height: 32px;
+}
+
+.PLStatementWarningText{
+    width: 100%;
+    margin-top: 26px;
+    color: #979797;
+}
