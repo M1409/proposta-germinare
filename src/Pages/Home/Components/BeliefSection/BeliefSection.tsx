@@ -11,7 +11,8 @@ import hands from './Assets/Images/hands.svg'
 import target from './Assets/Images/target.svg'
 import sunny from './Assets/Images/sunny.svg'
 
-import styles from './BeliefSection.module.style.scss'
+import styles from './BeliefSection.module.scss'
+
 
 export function BeliefSection() {
 
@@ -62,13 +63,13 @@ export function BeliefSection() {
 
     return (
         <LayoutSection src={Beliefs} color='rgba(1, 22, 137, 0.8)' height='576px'>
-            <div style={{ textAlign: 'center' }}>
+            <div className={styles.BeliefSectionTitle}>
                 <Typography color="white" variant="TypographySubtitle">
                     Nossas Crenças
                 </Typography>
             </div>
 
-            <div className={styles.CardsContainer}>
+            <div style = {{display: 'flex', justifyContent: 'center', gap: '50px', flexWrap: 'wrap', alignItems: 'center', margin: `50px auto`,maxWidth: '900px' }}>
                 {cards.map(card =>(
                     <WhiteCard content={card.content} width = {card.width}>
                         <img src={card.icon} alt={card.content} /> 

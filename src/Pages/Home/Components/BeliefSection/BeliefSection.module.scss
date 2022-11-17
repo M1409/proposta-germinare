@@ -1,0 +1,14 @@
+.CardsContainer{
+    display: 'flex'; 
+    justify-content: 'center';
+    gap: '50px'; 
+    flex-wrap: 'wrap';
+    align-items: 'center';
+    margin: '50px auto';
+    max-width: '900px'; 
+}
+
+.BeliefSectionTitle{
+    text-align: center;
+    margin-top: 40px;
+}
