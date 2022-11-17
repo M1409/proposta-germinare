@@ -1,11 +1,49 @@
 .PLStatement-all-container{
     display: flex;
     flex-wrap: wrap;
-    width: 75%;
+    width: 85%;
     margin: auto;
     justify-content: center;
     font-size: 16px;
     gap: 30px;
 }
 
+
+.PLStatement-div{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    font-size: 16px;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    max-width: 500px !important;
+    width: 80vw !important;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.css-1rwt2y5-MuiButtonBase-root-MuiButton-root{
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 2px;
+    color: #FFFFFF;
+    background-color: #2E3092;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.PLStatement-generic-text{
+    width: 100%;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    padding: 5px;
+    border-radius: 2px;
+    color: #2E3092;
+    font-family: Montserrat, sans-serif;
+    transition: 0.4s all ease-in;
+}
+
+.MuiTypography-root.MuiTypography-h6.MuiDialogTitle-root.css-140puxv-MuiTypography-root-MuiDialogTitle-root{
+    font-family: Montserrat, sans-serif;
+}
 
