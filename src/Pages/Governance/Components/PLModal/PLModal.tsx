@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '../../../../Components/Button/Button';
+import { Button } from '../../../../Components/Button/Button';
 import styles from './PLModal.module.scss'
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
@@ -61,7 +61,7 @@ export function PLModal() {
 
   return (
     <div>
-      <Button variant="button-outlined" onClick={handleClickOpen}>
+      <Button variant="outlined" onClick={handleClickOpen}>
         Saiba Mais
       </Button>
       <BootstrapDialog
@@ -103,7 +103,7 @@ export function PLModal() {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button variant='button-outlined' autoFocus onClick={handleClose}>
+          <Button variant='outlined' autoFocus onClick={handleClose}>
             Entendi
           </Button>
         </DialogActions>

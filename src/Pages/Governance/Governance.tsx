@@ -1,5 +1,7 @@
 import './style.scss'
 import { PLStatement, SimpleText, TopicText, PLModal } from './Components'
+import { WelcomeBanner } from '../../Components/WelcomeBanner'
+import Banner from './Components/Assets/Images/Banner.png'
 
 const documents = [
     {
@@ -50,6 +52,8 @@ const documents = [
 
 export function Governance() {
     return (
+        <>
+        <WelcomeBanner crumbColor='#95A5FC' bannerHeight='360px' bannerSrc={Banner}  titleWidth='540px'></WelcomeBanner>
         <div className='PLStatement-all-container'>
             <p className='PLStatement-generic-text'>O modelo de Governança Corporativa da Escola Germinare, instituição sem fins lucrativos, visa atender aos mais altos padrões de organizações públicas ou privadas como forma de orientar nossa atuação a partir das boas práticas do setor educacional. Nossas ações e nosso plano diretivo são orientados com base em nossa missão, crença e valores. Buscamos contribuir com a sociedade, oferecendo ensino de alta qualidade com o propósito de formar líderes em negócios, que serão os futuros gestores do nosso país. Além do ensino gratuito, os alunos recebem refeições diárias, uniforme e todo o material didático.</p>
             <p className='PLStatement-generic-text'>Como forma de manter a transparência junto a sociedade e apoiadores, publicamos abaixo os demonstrativos financeiros da Escola Germinare:</p>
@@ -58,5 +62,6 @@ export function Governance() {
             <div className='PLStatement-div'><PLModal /></div>
             <TopicText />
         </div>
+        </>
     )
 }
