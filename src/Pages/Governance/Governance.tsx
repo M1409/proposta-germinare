@@ -1,5 +1,5 @@
 import './style.scss'
-import { PLStatement } from './Components'
+import { PLStatement, SimpleText, TopicText } from './Components'
 
 const documents = [
     {
@@ -48,12 +48,14 @@ const documents = [
     },
 ]
 
-export default function Governance() {
+export function Governance() {
     return (
         <div className='PLStatement-all-container'>
-        <p>O modelo de Governança Corporativa da Escola Germinare, instituição sem fins lucrativos, visa atender aos mais altos padrões de organizações públicas ou privadas como forma de orientar nossa atuação a partir das boas práticas do setor educacional. Nossas ações e nosso plano diretivo são orientados com base em nossa missão, crença e valores. Buscamos contribuir com a sociedade, oferecendo ensino de alta qualidade com o propósito de formar líderes em negócios, que serão os futuros gestores do nosso país. Além do ensino gratuito, os alunos recebem refeições diárias, uniforme e todo o material didático.</p>
-        <p>Como forma de manter a transparência junto a sociedade e apoiadores, publicamos abaixo os demonstrativos financeiros da Escola Germinare:</p>
-        <PLStatement documents={documents}/>
+            <p>O modelo de Governança Corporativa da Escola Germinare, instituição sem fins lucrativos, visa atender aos mais altos padrões de organizações públicas ou privadas como forma de orientar nossa atuação a partir das boas práticas do setor educacional. Nossas ações e nosso plano diretivo são orientados com base em nossa missão, crença e valores. Buscamos contribuir com a sociedade, oferecendo ensino de alta qualidade com o propósito de formar líderes em negócios, que serão os futuros gestores do nosso país. Além do ensino gratuito, os alunos recebem refeições diárias, uniforme e todo o material didático.</p>
+            <p>Como forma de manter a transparência junto a sociedade e apoiadores, publicamos abaixo os demonstrativos financeiros da Escola Germinare:</p>
+            <PLStatement documents={documents} />
+            <SimpleText />
+            <TopicText />
         </div>
     )
 }
