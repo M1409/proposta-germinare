@@ -69,7 +69,7 @@ export function BeliefSection() {
                 </Typography>
             </div>
 
-            <div style = {{display: 'flex', justifyContent: 'center', gap: '50px', flexWrap: 'wrap', alignItems: 'center', margin: `50px auto`,maxWidth: '900px' }}>
+            <div className={styles.BeliefCards}>
                 {cards.map(card =>(
                     <WhiteCard content={card.content} width = {card.width}>
                         <img src={card.icon} alt={card.content} /> 
