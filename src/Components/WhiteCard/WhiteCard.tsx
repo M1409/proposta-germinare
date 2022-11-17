@@ -6,7 +6,7 @@ export function WhiteCard(){
     return(
         <div className={styles.WhiteCard}>
             <AiOutlineEye className={styles.WhiteCardIcon}/>
-            <Typography color="blue" variant="typography-paragraph" style = {{fontWeight: 700}}>
+            <Typography color="blue" variant="TypographyParagraph" className={styles.WhiteCardText}>
                 Foco no Detalhe
             </Typography>
         </div>

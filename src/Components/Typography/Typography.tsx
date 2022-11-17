@@ -10,6 +10,6 @@ export type TypographyProps = {
 export function Typography({children,variant, color, width, ...props}:TypographyProps){
     
     return (
-        <p {...props} className = {variant} style = {{color: color, width: width}}> {children} </p>
+        <p  className = {variant} style = {{color: color, width: width}} {...props}> {children} </p>
     )
 }
