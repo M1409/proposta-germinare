@@ -74,7 +74,7 @@ export default function Carousel() {
         <div style={{ backgroundImage: `url(${item.image})`, width: '100%' }} className={styles.main}>
           <span className={styles.darkbg}>
             <div className={styles.carousel_content}>
-              <Typography id={`${index - 1}`} variant='typography-title' color='white'>{item.content.title} <br></br>
+              <Typography id={`${index - 1}`} variant='TypographyTitle' color='white'>{item.content.title} <br></br>
                 <span style={{ color: '#4057D8' , textTransform: 'capitalize'}}>{item.content.bigtitle}</span></Typography>
                 <Button id={`${index - 1}`} variant='button-filled'>{item.content.buttonContent}</Button>
             </div>
