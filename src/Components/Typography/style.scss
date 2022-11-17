@@ -1,26 +1,21 @@
-p{
-
-}
-
-
-.typography-paragraph{
+.TypographyParagraph{
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
 }
 
-.typography-subtitle{
+.TypographySubtitle{
     font-weight: 700;
     font-size: 32px;
 }
 
-.typography-title{
+.TypographyTitle{
     font-weight: 700;
     font-size: 48px;
 }
-.blue{
-    color: #011689;
-}
-.white{
-    color: white;
+
+@media only screen and (max-width: 700px) {
+    .TypographyTitle {
+        font-size: 38px;
+    }
 }

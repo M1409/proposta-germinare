@@ -1,0 +1,124 @@
+.navContainer {
+  width: 100vw;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+}
+
+.lineContainer {
+  display: flex;
+}
+
+.blackLine,
+.blueLine {
+  height: 10px;
+}
+
+.blackLine {
+  width: 30vw;
+  background-color: #272727;
+}
+
+.navItemsContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1260px;
+}
+
+.blueLine {
+  width: 70vw;
+  background-color: #011689;
+}
+
+.navItems {
+  transition: ease-in-out 0.5s;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navItems {
+  & li {
+    width: fit-content;
+    text-align: center;
+    & a {
+      color: black;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+
+.hamburguer {
+  display: none;
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  height: 25px;
+  width: 30px;
+
+  & > div {
+    border-radius: 5px;
+    left: 0;
+    position: absolute;
+    transition: all ease-in-out 0.5s;
+    height: 5px;
+    width: 30px;
+    background-color: #011689;
+  }
+
+  & > div:first-child {
+    top: 0;
+  }
+
+  & > div:nth-child(2) {
+    top: 10px;
+  }
+
+  & > div:last-child {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hamburguer {
+    display: block;
+  }
+
+  .hamburguer.open {
+    & > div:first-child {
+      width: 40px;
+      transform: rotate(-50deg) translateX(-9px) translateY(1px);
+    }
+    & > div:nth-child(2) {
+      transform: translate(-100px);
+      opacity: 0;
+    }
+    & > div:last-child {
+      width: 40px;
+      transform: rotate(50deg) translateX(-12px) translateY(-4px);
+    }
+  }
+
+  .navItems {
+    border-top: #011689 2px solid;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    top: 100px;
+    z-index: 2;
+    right: calc( -200px );
+    width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
+
+  }
+
+  .navItems.open {
+    right: 0px;
+  }
+}
