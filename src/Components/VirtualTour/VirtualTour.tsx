@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import './style.scss'
 
-export type VirtualTour = {
+export type VirtualTourProps = {
     tours: {
         location: string;
         src: string;
     }[];
 }
 
-export function VirtualTour({ tours }: VirtualTour) {
+export function VirtualTour({ tours }: VirtualTourProps) {
     const [currentLocationSrc, setCurrentLocationSrc] = useState(tours[0].src)
 
     return (
