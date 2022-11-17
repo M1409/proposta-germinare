@@ -11,6 +11,7 @@ import Button from '../../../Components/Button/Button';
 interface iError {
     reference: string
 }
+
 export interface State extends SnackbarOrigin {
     open?: boolean;
   }
@@ -51,7 +52,7 @@ export default function ContactForms() {
                         ? Object.entries(a.messages).map(([type, message]) => (
                             <p key={type}>{a.message}</p>
                         ))
-                        : <Typography variant='typography-paragraph' id={styles.errorMessage}>{a.message}</Typography>;
+                        : <Typography variant='TypographyParagraph' id={styles.errorMessage}>{a.message}</Typography>;
                 }}
             />
         )
