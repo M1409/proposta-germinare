@@ -1,1 +1,1 @@
-export * from './CrencasSection'
+export * from './BeliefSection'

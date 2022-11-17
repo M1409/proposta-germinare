@@ -23,3 +23,16 @@
 	}
 }
 
+@media only screen and (max-width: 768px) {
+	.HomeMissionSection{
+		flex-direction: column;
+
+		img {
+			display: none;
+		}
+	}
+
+    
+    
+}
+
