@@ -1,6 +1,5 @@
 import styles from './Footer.module.scss'
-import { Typography } from '../Typography'
-import { ifb, iinsta, itk, iyt } from '../../Assets/Images/index'
+import { ifb, iinsta, itk, iyt } from './Assets/Images/index'
 export default function Footer() {
     return (
         <footer className={styles.footer}>

@@ -1,0 +1,22 @@
+.WelcomeContainer{
+    margin-left: 110px;
+    margin-top: 98px;
+}
+
+.WelcomeContainer p {
+    margin-bottom: 28px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .WelcomeContainer {
+        margin-left: 50px;
+        margin-top: 98px;
+    }
+
+    .WelcomeContainer p {
+        width: calc(100vw - 80px) !important;
+    }
+    
+}
+
