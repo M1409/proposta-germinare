@@ -5,6 +5,5 @@ export default function App() {
     <div className="App">
       <WhiteCard/>
     </div>
-
   );
 }
