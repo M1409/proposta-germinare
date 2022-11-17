@@ -5,9 +5,9 @@ import Slider from "react-slick";
 import bg from '../../Assets/Images/bg.png'
 import { Typography } from '../../../../Components/Typography';
 import Button from '../../../../Components/Button/Button';
-import c2 from '../../Assets/Images/c2.png'
-import c3 from '../../Assets/Images/c3.png'
-import c4 from '../../Assets/Images/c4.png'
+import c2 from './Assets/Images/c2.png'
+import c3 from './Assets/Images/c3.png'
+import c4 from './Assets/Images/c4.png'
 import $ from 'jquery';
 import { useEffect } from 'react';
 import './animation.scss'
