@@ -2,7 +2,7 @@ import './style.scss'
 
 export type TypographyProps = {
     variant?: 'TypographyParagraph' | 'TypographySubtitle' | 'TypographyTitle'
-    color: '#2E3092' | 'white'
+    color?: '#2E3092' | 'white'
     width?: string
 }   & React.DetailedHTMLProps<React.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>
 
