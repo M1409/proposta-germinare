@@ -17,6 +17,7 @@ export function Breadcrumbs({crumbInitialColor, ...props}:BreadcrumbsProps) {
         if (routes.indexOf(item) === routes.length - 1){
             crumb = ''
             color = '#95A5FC'
+            
         }
         return <Link className="crumbs" to = {item.href} style = {{textDecoration: 'none', color: color}}> {item.label + ' ' + crumb} </Link>
     }
