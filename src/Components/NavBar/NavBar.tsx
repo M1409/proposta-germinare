@@ -1,6 +1,6 @@
 import style from "./NavBar.module.scss";
 import { lgerminare } from "./Assets/index";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type NavBar = {
   navItems: {
@@ -8,12 +8,11 @@ type NavBar = {
     url?: string; //rota
     CustomItem?: React.ReactNode;
   }[];
+  hamburguerMenu?: boolean;
 };
 
-export function NavBar({ navItems }: NavBar) {
+export function NavBar({ navItems, hamburguerMenu = true }: NavBar) {
   const [openMenu, setOpenMenu] = useState(false);
-
-  useEffect(()=>{console.log(openMenu)}, [openMenu])
 
   return (
     <div className={style.navContainer}>
@@ -21,19 +20,21 @@ export function NavBar({ navItems }: NavBar) {
         <div className={style.blackLine} />
         <div className={style.blueLine} />
       </div>
-      <div className={style.navItemsContainer}>
-        <img src={lgerminare} style={{width: "150px"}}/>
-       
-        <ul className={`
+      <div className={`${style.navItemsContainer} ${hamburguerMenu ? style.hamburguerMenu : ''}`}>
+        <img src={lgerminare} style={{ width: "150px" }} />
+
+        <ul
+          className={`
           ${style.navItems}
           ${openMenu ? style.open : style.closed}
-          `}>
-          {navItems.map(({ label, url, CustomItem }) => {
+          `}
+        >
+          {navItems.map(({ label, url, CustomItem }, index) => {
             if (CustomItem) {
-              return <li>{CustomItem}</li>;
+              return <li key={index}>{CustomItem}</li>;
             } else {
               return (
-                <li>
+                <li key={index}>
                   <a href={url}>{label}</a>
                 </li>
               );

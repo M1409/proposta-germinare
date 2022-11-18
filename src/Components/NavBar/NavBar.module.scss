@@ -1,5 +1,5 @@
 .navContainer {
-  width: 100vw;
+  width: 100%;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 90px;
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1260px;
@@ -34,7 +34,7 @@
 }
 
 .navItems {
-  transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.3s;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -85,40 +85,44 @@
 }
 
 @media (max-width: 1100px) {
-  .hamburguer {
-    display: block;
-  }
-
-  .hamburguer.open {
-    & > div:first-child {
-      width: 40px;
-      transform: rotate(-50deg) translateX(-9px) translateY(1px);
+  .hamburguerMenu {
+    & .hamburguer {
+      display: block;
     }
-    & > div:nth-child(2) {
-      transform: translate(-100px);
-      opacity: 0;
+
+    & .hamburguer.open {
+      & > div:first-child {
+        width: 40px;
+        transform: rotate(-50deg) translateX(-9px) translateY(1px);
+      }
+      & > div:nth-child(2) {
+        transform: translate(-100px);
+        opacity: 0;
+      }
+      & > div:last-child {
+        width: 40px;
+        transform: rotate(50deg) translateX(-12px) translateY(-4px);
+      }
     }
-    & > div:last-child {
-      width: 40px;
-      transform: rotate(50deg) translateX(-12px) translateY(-4px);
+
+    & .navItems {
+      overflow-x: hidden;
+      border-top: #011689 2px solid;
+      position: absolute;
+      background-color: white;
+      flex-direction: column;
+      top: 90px;
+      z-index: 2;
+      right: 0;
+      transform: translateX(250px);
+      width: 0;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 20px 0;
     }
-  }
 
-  .navItems {
-    border-top: #011689 2px solid;
-    position: absolute;
-    background-color: white;
-    flex-direction: column;
-    top: 100px;
-    z-index: 2;
-    right: calc( -200px );
-    width: 200px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 20px 0;
-
-  }
-
-  .navItems.open {
-    right: 0px;
+    & .navItems.open {
+      transform: translateX(0);
+      width: 250px;
+    }
   }
 }
