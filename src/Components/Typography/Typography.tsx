@@ -7,7 +7,7 @@ export type TypographyProps = {
 }   & React.DetailedHTMLProps<React.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>
 
 
-export function Typography({children,variant, color, width, ...props}:TypographyProps){
+export function Typography({children,variant, color='#2E3092', width, ...props}:TypographyProps){
     
     return (
         <p  className = {variant} style = {{color: color, width: width}} {...props}> {children} </p>

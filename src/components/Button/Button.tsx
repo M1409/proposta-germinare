@@ -1,14 +1,13 @@
-import './style.scss'
+import style from './Button.module.scss'
 import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react'
 
 export type ButtonProps = {
-    variant: "button-filled" | "button-outlined"
+    variant?: "filled" | "outlined";
 } & DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
-export default function Button({ children, variant, ...props }: ButtonProps) {
-
+export function Button({ children, variant = "filled",  ...props }: ButtonProps) {
     return (
-        <button  {...props} className={variant}>
+        <button className={`${style.button} ${style[variant]}`} {...props}>
             {children}
         </button>
     )
