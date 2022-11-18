@@ -1,6 +1,6 @@
 import styles from './Footer.module.scss'
 import { ifb, iinsta, itk, iyt } from './Assets/Images/index'
-export default function Footer() {
+export function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.mainContainer}>
