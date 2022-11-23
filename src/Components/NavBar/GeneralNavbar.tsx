@@ -1,15 +1,16 @@
 import { Button, NavBar } from "../index";
 import { SearchBar } from "./SearchBar";
-
+import { useNavigate } from "react-router-dom";
 export function GeneralNavBar() {
+  const navigate = useNavigate()
   const navItems = [
     {
       label: "Tour virtual",
-      url: "",
+      url: "/tour",
     },
     {
       label: "Governança",
-      url: "",
+      url: "/home/governança",
     },
     {
       label: "Sobre nós",
@@ -31,7 +32,9 @@ export function GeneralNavBar() {
       CustomItem: <SearchBar />,
     },
     {
-      CustomItem: <Button variant="outlined">Admissão</Button>,
+      CustomItem: <Button variant="outlined" onClick={()=>{
+        navigate('/home/admissão')
+      }}>Admissão</Button>,
     },
   ];
 

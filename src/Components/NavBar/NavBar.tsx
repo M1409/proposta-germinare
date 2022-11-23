@@ -1,7 +1,7 @@
 import style from "./NavBar.module.scss";
 import { lgerminare } from "./Assets/index";
 import { useState } from "react";
-
+import {Link} from 'react-router-dom'
 type NavBar = {
   navItems: {
     label?: string;
@@ -21,7 +21,7 @@ export function NavBar({ navItems, hamburguerMenu = true }: NavBar) {
         <div className={style.blueLine} />
       </div>
       <div className={`${style.navItemsContainer} ${hamburguerMenu ? style.hamburguerMenu : ''}`}>
-        <img src={lgerminare} style={{ width: "150px" }} />
+        <Link to='/' ><img src={lgerminare} style={{ width: "150px" }} /></Link>
 
         <ul
           className={`
@@ -35,7 +35,7 @@ export function NavBar({ navItems, hamburguerMenu = true }: NavBar) {
             } else {
               return (
                 <li key={index}>
-                  <a href={url}>{label}</a>
+                  <Link to={`${url}`}>{label}</Link>
                 </li>
               );
             }
