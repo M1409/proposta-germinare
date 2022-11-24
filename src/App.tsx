@@ -1,6 +1,11 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { GeneralNavBar, Footer } from "./Components";
-import { VirtualTour, Governance, Admission, Home } from "./Pages";
+import { lazy } from "react";
+const Governance = lazy(()=> import("./Pages/Governance").then(({ Governance }) => ({ default: Governance })))
+const GeneralNavBar = lazy(()=> import("./Components").then(({ GeneralNavBar }) => ({ default: GeneralNavBar })))
+const Footer = lazy(()=> import("./Components").then(({ Footer }) => ({ default: Footer })))
+const Admission = lazy(()=> import("./Pages/Admission").then(({ Admission }) => ({ default: Admission })))
+const VirtualTour = lazy(()=> import("./Pages/VirtualTour").then(({ VirtualTour }) => ({ default: VirtualTour })))
+const Home = lazy(()=> import("./Pages/Home").then(({ Home }) => ({ default: Home })))
 
 export default function App() {
   const { pathname } = useLocation();
