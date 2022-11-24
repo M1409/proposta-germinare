@@ -1,1 +1,1 @@
-import { LazyLoading } from "./LazyLoading";
+export * from './LazyLoading';

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './global.scss'
 import App from './App';
 import { HashRouter as Router } from "react-router-dom";
-import { LazyLoading } from './Pages/LazyLoading/LazyLoading';
+import { LazyLoading } from './Pages';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
