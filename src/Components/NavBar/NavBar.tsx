@@ -2,20 +2,21 @@ import style from "./NavBar.module.scss";
 import { lgerminare } from "./Assets/index";
 import { useState } from "react";
 import {Link} from 'react-router-dom'
-type NavBar = {
+
+export type NavBarProps = {
   navItems: {
     label?: string;
     url?: string; //rota
     CustomItem?: React.ReactNode;
   }[];
   hamburguerMenu?: boolean;
-};
+} & React.HTMLProps<HTMLDivElement>;
 
-export function NavBar({ navItems, hamburguerMenu = true }: NavBar) {
+export function NavBar({ navItems, hamburguerMenu = true, ...props }: NavBarProps) {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className={style.navContainer}>
+    <div className={style.navContainer} {...props}>
       <div className={style.lineContainer}>
         <div className={style.blackLine} />
         <div className={style.blueLine} />
@@ -26,7 +27,7 @@ export function NavBar({ navItems, hamburguerMenu = true }: NavBar) {
         <ul
           className={`
           ${style.navItems}
-          ${openMenu ? style.open : style.closed}
+          ${openMenu ? style.open : ''}
           `}
         >
           {navItems.map(({ label, url, CustomItem }, index) => {
@@ -45,7 +46,7 @@ export function NavBar({ navItems, hamburguerMenu = true }: NavBar) {
           onClick={() => setOpenMenu((prev) => !prev)}
           className={`
           ${style.hamburguer}
-          ${openMenu ? style.open : style.closed}
+          ${openMenu ? style.open : ''}
         `}
         >
           <div />

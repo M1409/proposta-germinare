@@ -1,7 +1,8 @@
-import { Button, NavBar } from "../index";
-import { SearchBar } from "./SearchBar";
+import { Button } from "../index";
+import { SearchBar, NavBar, NavBarProps } from "./index";
 import { useNavigate } from "react-router-dom";
-export function GeneralNavBar() {
+
+export function GeneralNavBar({...props}: Omit<NavBarProps, "navItems">) {
   const navigate = useNavigate()
   const navItems = [
     {
@@ -38,5 +39,5 @@ export function GeneralNavBar() {
     },
   ];
 
-  return <NavBar navItems={navItems} />;
+  return <NavBar {...props} navItems={navItems} />;
 }
