@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import bg from './Assets/Images/bg.png'
 import { Typography } from '../../../../Components/Typography';
-import Button from '../../../../Components/Button/Button';
+import {Button} from '../../../../Components';
 import c2 from './Assets/Images/c2.png'
 import c3 from './Assets/Images/c3.png'
 import c4 from './Assets/Images/c4.png'
@@ -76,7 +76,7 @@ export default function Carousel() {
             <div className={styles.carousel_content}>
               <Typography id={`${index - 1}`} variant='TypographyTitle' color='white'>{item.content.title} <br></br>
                 <span style={{ color: '#4057D8' , textTransform: 'capitalize'}}>{item.content.bigtitle}</span></Typography>
-                <Button id={`${index - 1}`} variant='button-filled'>{item.content.buttonContent}</Button>
+                <Button id={`${index - 1}`} variant='filled'>{item.content.buttonContent}</Button>
             </div>
           </span>
         </div>

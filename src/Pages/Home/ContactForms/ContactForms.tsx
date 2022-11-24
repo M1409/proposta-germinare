@@ -2,12 +2,11 @@ import * as React from 'react';
 import styles from './ContactForms.module.scss'
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message';
-import { Typography } from '../../../Components/Typography'
+import { Typography, Button } from '../../../Components'
 import formsImage from './Assets/formsImage.png'
 import Snackbar, {SnackbarOrigin } from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import $ from 'jquery'
-import Button from '../../../Components/Button/Button';
 interface iError {
     reference: string
 }
@@ -83,7 +82,7 @@ export default function ContactForms() {
                         <span>Sua Mensagem</span>
                         <textarea className='textfield' id='message' placeholder="Ex: Tenho dúvidas em relação a determinados assuntos, como por exemplo: X, Y e Z." {...register("message", { required: { value: true, message: 'Esse campo é obrigatório.' } })} />
                     </div>
-                    <Button variant='button-filled' type='submit' id={styles.btn}>Enviar</Button>
+                    <Button variant='filled' type='submit' id={styles.btn}>Enviar</Button>
                 </form>
             </div>
             <Snackbar open={open} autoHideDuration={8000} onClose={()=>{setOpen(false)}} anchorOrigin={{ vertical, horizontal }}>

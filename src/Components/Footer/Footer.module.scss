@@ -2,12 +2,14 @@
 $border: 30px;
 .footer{
     color: white;
-    width: calc(100vw - ($padding-left * 2));
-    position: absolute;
-    bottom: 0;
+    width: calc(100% - ($padding-left * 2));
+    // position: absolute;
+    // bottom: 0;
     background-color: #272727;
     min-height: 24%;
     padding: 0 $padding-left;
+    padding-top: calc($padding-left / 12);
+    padding-bottom: 10px;
     border-bottom: #404040 $border solid;
 
     .title{

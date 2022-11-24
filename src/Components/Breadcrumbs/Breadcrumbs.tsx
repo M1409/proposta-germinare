@@ -4,11 +4,10 @@ import './Breadcrumbs.module.scss'
 import { PathType } from "../../hooks/useRouter";
 
 export type BreadcrumbsProps = {
-    crumbColor: string
     crumbInitialColor: string
 }
 
-export function Breadcrumbs({crumbColor,crumbInitialColor, ...props}:BreadcrumbsProps) {
+export function Breadcrumbs({crumbInitialColor, ...props}:BreadcrumbsProps) {
 
     const [routes] = useRouter()
 
@@ -17,7 +16,8 @@ export function Breadcrumbs({crumbColor,crumbInitialColor, ...props}:Breadcrumbs
         let color = crumbInitialColor
         if (routes.indexOf(item) === routes.length - 1){
             crumb = ''
-            color = crumbColor
+            color = '#95A5FC'
+            
         }
         return <Link className="crumbs" to = {item.href} style = {{textDecoration: 'none', color: color}}> {item.label + ' ' + crumb} </Link>
     }
