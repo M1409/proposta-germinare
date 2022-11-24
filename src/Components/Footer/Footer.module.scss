@@ -2,8 +2,8 @@
 $border: 30px;
 .footer{
     color: white;
-    width: calc(100% - ($padding-left * 2));
-    position: relative;
+    width: 100%;
+    // position: absolute;
     // bottom: 0;
     background-color: #272727;
     min-height: 24%;
