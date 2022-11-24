@@ -1,40 +1,42 @@
 import style from "./NavBar.module.scss";
 import { lgerminare } from "./Assets/index";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import {Link} from 'react-router-dom'
 
-type NavBar = {
+export type NavBarProps = {
   navItems: {
     label?: string;
     url?: string; //rota
     CustomItem?: React.ReactNode;
   }[];
-};
+  hamburguerMenu?: boolean;
+} & React.HTMLProps<HTMLDivElement>;
 
-export function NavBar({ navItems }: NavBar) {
+export function NavBar({ navItems, hamburguerMenu = true, ...props }: NavBarProps) {
   const [openMenu, setOpenMenu] = useState(false);
 
-  useEffect(()=>{console.log(openMenu)}, [openMenu])
-
   return (
-    <div className={style.navContainer}>
+    <div className={style.navContainer} {...props}>
       <div className={style.lineContainer}>
         <div className={style.blackLine} />
         <div className={style.blueLine} />
       </div>
-      <div className={style.navItemsContainer}>
-        <img src={lgerminare} style={{width: "150px"}}/>
-       
-        <ul className={`
+      <div className={`${style.navItemsContainer} ${hamburguerMenu ? style.hamburguerMenu : ''}`}>
+        <Link to='/' ><img src={lgerminare} style={{ width: "150px" }} /></Link>
+
+        <ul
+          className={`
           ${style.navItems}
-          ${openMenu ? style.open : style.closed}
-          `}>
-          {navItems.map(({ label, url, CustomItem }) => {
+          ${openMenu ? style.open : ''}
+          `}
+        >
+          {navItems.map(({ label, url, CustomItem }, index) => {
             if (CustomItem) {
-              return <li>{CustomItem}</li>;
+              return <li key={index}>{CustomItem}</li>;
             } else {
               return (
-                <li>
-                  <a href={url}>{label}</a>
+                <li key={index}>
+                  <Link to={`${url}`}>{label}</Link>
                 </li>
               );
             }
@@ -44,7 +46,7 @@ export function NavBar({ navItems }: NavBar) {
           onClick={() => setOpenMenu((prev) => !prev)}
           className={`
           ${style.hamburguer}
-          ${openMenu ? style.open : style.closed}
+          ${openMenu ? style.open : ''}
         `}
         >
           <div />
