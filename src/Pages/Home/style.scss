@@ -11,7 +11,7 @@
 	margin-bottom: 60px;
 	display: flex;
 	justify-content: space-around;
-	width: 90vw;
+	width: 90%;
 	align-items: center;
 }
 
@@ -24,11 +24,9 @@
 }
 
 .SupportSection{
-	margin: 60px 0;
+	margin: 60px 0 90px 0;
 	margin-left: 190px;
-	display: flex;
-	justify-content: space-between;
-	width: 80%;
+	width: 90%;
 
 	:first-child{
 		margin-bottom:36px ;
@@ -39,21 +37,70 @@
 		width: fit-content;
 		justify-content: space-between;
 		margin-top: 62px;
-		margin-bottom: 40px;
+		
 
 		:first-child{
 			margin-right: 20px;
 		}
 	}
+
+	.SupportContainer{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#SupportLegal{
+		margin-top: -20px;
+	}
+
+	.SupportImgs{
+		display: flex;
+		justify-content: space-evenly;
+		width: 60%;
+	}
+}
+
+.FormsSection{
+	margin-top: 30px;
+	p{
+		margin-left: 192px;
+	}
+	
 }
 
 @media only screen and (max-width: 768px) {
 	.HomeMissionSection{
 		flex-direction: column;
+		margin-left: 20px;
 
 		img {
 			display: none;
 		}
+	}
+
+	.SupportSection{
+		margin-left: 40px ;
+
+		.SupportContainer{
+			flex-direction: column;
+		}
+
+		.SupportImgs{
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			:last-child{
+				display: none;
+			}
+		}
+
+	}
+
+	.FormsSection{
+		p{
+			margin-left: 40px;
+		}
+		
 	}
 }
 

@@ -16,7 +16,7 @@ import useWindowDimensions from "../../../../hooks/useWindowDimensions"
 
 export function BeliefSection() {
 
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
 
     const cards = [
