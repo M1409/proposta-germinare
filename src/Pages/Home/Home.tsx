@@ -2,12 +2,10 @@ import './style.scss'
 import HomeMission from './Assets/Images/HomeMission.png'
 import Carousel from './Components/Carousel/Carousel'
 import { Typography } from '../../Components/Typography'
-import Button from '../../Components/Button/Button'
+import {Button} from '../../Components/Button/Button'
 import { BeliefSection } from './Components/BeliefSection'
 import QrCode from './Assets/Images/QrCode.svg'
 import QrCodeIlustration from './Assets/Images/QrCodeIlustration.svg'
-import { style } from '@mui/system'
-
 
 export default function Home() {
     return (
@@ -51,11 +49,11 @@ export default function Home() {
                     </Typography>
 
                     <div className='SupportButtons'>
-                        <Button variant='button-filled' width='148px' height='50px' >
+                        <Button variant='filled' width='162px' height='50px' >
                             Doação Única
                         </Button>
 
-                        <Button variant='button-outlined' width='148px' height='50px' >
+                        <Button variant='outlined' width='162px' height='50px' >
                             Doação Mensal
                         </Button>
                     </div>
@@ -66,9 +64,8 @@ export default function Home() {
                 </div>
 
                 <div>
-                <img src={QrCode} alt="" />
-                <img src={QrCodeIlustration} alt="" />
-
+                    <img src={QrCode} alt="" />
+                    <img src={QrCodeIlustration} alt="" />
                 </div>
 
         

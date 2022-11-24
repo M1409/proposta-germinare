@@ -10,59 +10,53 @@ import pen from './Assets/Images/pen.svg'
 import hands from './Assets/Images/hands.svg'
 import target from './Assets/Images/target.svg'
 import sunny from './Assets/Images/sunny.svg'
-
 import styles from './BeliefSection.module.scss'
+import useWindowDimensions from "../../../../hooks/useWindowDimensions"
 
 
 export function BeliefSection() {
 
+    const { height, width } = useWindowDimensions();
+
+
     const cards = [
         {
             "content": "Foco no Detalhe",
-            "width": "",
+
             "icon": eye
         },
         {
             "content": "Pessoa Certa no Lugar Certo",
-            "width": "",
             "icon": people
         },
         {
             "content": "Qualidade nas Entregas",
-            "width": "",
             "icon": box
         },
         {
             "content": "Nada Resiste ao Trabalho",
-            "width": "",
             "icon": bag
         },
         {
             "content": "Mão na Massa",
-            "width": "",
             "icon": pen
         },
         {
             "content": "Liderar pelo Exemplo",
-            "width": "",
             "icon": hands
         },
         {
             "content": "Foco no Resultado",
-            "width": "",
             "icon": target
         },
         {
             "content": "Melhorar a Cada Dia",
-            "width": "",
             "icon": sunny
         },
-
     ]
 
-
     return (
-        <LayoutSection src={Beliefs} color='rgba(1, 22, 137, 0.8)' height='576px'>
+        <LayoutSection src={Beliefs} color='rgba(1, 22, 137, 0.8)' height={width <= 768 ? '1000px' : '576px'} id="BeliefBackGround">
             <div className={styles.BeliefSectionTitle}>
                 <Typography color="white" variant="TypographySubtitle">
                     Nossas Crenças
@@ -70,9 +64,9 @@ export function BeliefSection() {
             </div>
 
             <div className={styles.BeliefCards}>
-                {cards.map(card =>(
-                    <WhiteCard content={card.content} width = {card.width}>
-                        <img src={card.icon} alt={card.content} /> 
+                {cards.map(card => (
+                    <WhiteCard content={card.content}>
+                        <img src={card.icon} alt={card.content} />
                     </WhiteCard>
                 ))}
             </div>
