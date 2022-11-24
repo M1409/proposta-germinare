@@ -1,54 +1,105 @@
-import styles from './NewsSection.module.scss'
+import styles from "./NewsSection.module.scss";
+import { iretail, icomputer, ifamily, ifinances } from "./Assets/Images";
+
+export type Sections =
+  | "germinare"
+  | "escolaDaFamilia"
+  | "varejo"
+  | "tecnologia"
+  | "financas";
+
+export type SectionsInfo = Record<
+  Sections,
+  { name: string; color: string; icon: string }
+>;
+
+export type NewsCardProps = {
+  url: string;
+  title: string;
+  section: Sections;
+  img: {
+    src: string;
+    alt: string;
+    height?: string;
+  };
+};
 
 export type NewsCardsProps = {
-  newsElements: {
-    url: string;
-    title: string;
-    section: string;
-    sectionIcon: string;
-    imgSrc: string;
-    imgHeight: string;
-  }[];
-}
+  news: NewsCardProps[];
+};
 
-const colors= {
-  Varejo: '#E86339',
-  Escola: '#2E3092',
-  Tecnologia: '#11C76F',
-  Finanças: '#008646',
-}
+const sections: SectionsInfo = {
+  varejo: {
+    name: "Varejo",
+    color: "#E86339",
+    icon: iretail,
+  },
+  germinare: {
+    name: "Germinare",
+    color: "#2E3092",
+    icon: ifamily,
+  },
+  escolaDaFamilia: {
+    name: "Escola da Família",
+    color: "#2E3092",
+    icon: ifamily,
+  },
+  tecnologia: {
+    name: "Tecnologia",
+    color: "#11C76F",
+    icon: icomputer,
+  },
+  financas: {
+    name: "Finanças",
+    color: "#008646",
+    icon: ifinances,
+  },
+};
 
-export function NewsCards({ newsElements, ...props }: NewsCardsProps) {
+export function NewsCard({
+  url,
+  title,
+  section,
+  img: { src, alt, height },
+}: NewsCardProps) {
+  const { color, name, icon } = sections[section];
   return (
-    <>
-      <div className={styles.NewsSectionAllContent}>
-        <div className={styles.NewsSectionCardsContent}>
-          {newsElements.map(({ url, title, section, imgSrc, imgHeight, sectionIcon }, index) => {
-            return (
-            <div key={index} >
-              <a href={url} className={styles.NewsSectionRemoveLinkConfig}>
-                <img src={imgSrc} height={imgHeight} className={styles.NewsSectionImages}></img>
-                <div className={styles.NewsSectionDivTexts}>
-                  <div className={styles.NewsSectionArea}>
-                    <img src={sectionIcon}></img>
-                    {section === 'Escola' ?
-                    <p  className={styles.NewsSectionCenterText} style={{color: `${colors[section]}`}}>{section + ' da Família'}</p> 
-                    :
-                    //@ts-ignore
-                    <p  className={styles.NewsSectionCenterText} style={{color: `${colors[section]}`}}>{section}</p>
-                    }
-                  </div>
-                  <p className={styles.NewsSectionTextTitle}>{title}</p>
-                </div>
-              </a>
-              </div>
-            )
-          })}
+    <div>
+      <img
+        className={styles.NewsSectionImages}
+        src={src}
+        alt={alt}
+        style={{ height: height }}
+      />
+      <div className={styles.NewsSectionDivTexts}>
+        <div className={styles.NewsSectionArea}>
+          <img src={icon} />
+          <p style={{ color: color }}>{name}</p>
         </div>
+        <a href={url}>
+          <p className={styles.NewsSectionTextTitle}>{title}</p>
+        </a>
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
+export function NewsCards({ news, ...props }: NewsCardsProps) {
+  const firstColumn = news.filter((_, index) => (index % 2) - 1);
+  const secondColumn = news.filter((_, index) => index % 2);
 
-
+  return (
+    <div className={styles.NewsContainerWrapper}>
+      <div className={styles.NewsSectionCardsContent}>
+        {firstColumn.map((news) => (
+          <NewsCard {...news} />
+        ))}
+      </div>
+      <div className={styles.NewsSectionCardsContent}>
+        {secondColumn.map((news) => (
+          <NewsCard {...news} />
+        ))}
+      </div>
+    </div>
+  );
+}
