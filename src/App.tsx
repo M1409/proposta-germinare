@@ -3,21 +3,9 @@ import { Routes, Route, useLocation } from "react-router-dom";
 const Governance = lazy(()=> import("./Pages/Governance").then(({ Governance }) => ({ default: Governance })))
 const GeneralNavBar = lazy(()=> import("./Components").then(({ GeneralNavBar }) => ({ default: GeneralNavBar })))
 const Footer = lazy(()=> import("./Components").then(({ Footer }) => ({ default: Footer })))
-const Admission = lazy(() => {
-  return Promise.all([
-    import("./Pages/Admission").then(({ Admission }) => ({ default: Admission })),
-    new Promise(resolve => setTimeout(resolve, 6000))
-  ])
-  .then(([moduleExports]) => moduleExports);
-});
+const Admission = lazy(()=> import("./Pages/Admission").then(({ Admission }) => ({ default: Admission })))
 const VirtualTour = lazy(()=> import("./Pages/VirtualTour").then(({ VirtualTour }) => ({ default: VirtualTour })))
-const Home = lazy(() => {
-  return Promise.all([
-    import("./Pages/Home"),
-    new Promise(resolve => setTimeout(resolve, 6000))
-  ])
-  .then(([moduleExports]) => moduleExports);
-});
+const Home = lazy(()=> import("./Pages/Home").then(({ Home }) => ({ default: Home })))
 export default function App() {
   const [tour, setTour] = useState(false);
   const location = useLocation()

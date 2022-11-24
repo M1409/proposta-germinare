@@ -19,7 +19,7 @@ export function LazyLoading() {
                 </li>
               ))}
             </ul>
-            <span>Carregando</span>
+            <span>Carregando...</span>
           </div>
         </div>
     </div>
