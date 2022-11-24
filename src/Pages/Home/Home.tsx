@@ -2,7 +2,12 @@ import './style.scss'
 import HomeMission from './Assets/Images/HomeMission.png'
 import Carousel from './Components/Carousel/Carousel'
 import { Typography } from '../../Components/Typography'
+import Button from '../../Components/Button/Button'
 import { BeliefSection } from './Components/BeliefSection'
+import QrCode from './Assets/Images/QrCode.svg'
+import QrCodeIlustration from './Assets/Images/QrCodeIlustration.svg'
+import { style } from '@mui/system'
+
 
 export default function Home() {
     return (
@@ -33,7 +38,42 @@ export default function Home() {
                 </section>
                 <img src={HomeMission} alt="" />
             </div>
-            <BeliefSection/>
+            <BeliefSection />
+            <div className='SupportSection'>
+                <div>
+                    <Typography width='410px' variant='TypographySubtitle' color='#2E3092'>
+                        Como apoiar o projeto
+                    </Typography>
+
+                    <Typography width='381px' variant='TypographyParagraph'>
+                        Para apoiar, você pode fazer uma doação única ou mensalmente para a Escola Germinare pelo PicPay. Basta escolher uma das opções abaixo e escanear o QR Code que está ao lado.
+                        Realize o scan pelo aplicativo PicPay.
+                    </Typography>
+
+                    <div className='SupportButtons'>
+                        <Button variant='button-filled' width='148px' height='50px' >
+                            Doação Única
+                        </Button>
+
+                        <Button variant='button-outlined' width='148px' height='50px' >
+                            Doação Mensal
+                        </Button>
+                    </div>
+
+                    <Typography width='820px' variant='TypographyParagraph'>
+                        Caso seja Pessoa Jurídica ou queira fazer uma doação diretamente em nossa conta corrente, pedimos que por gentileza entre em contato conosco via instituto@germinare.org.br.
+                    </Typography>
+                </div>
+
+                <div>
+                <img src={QrCode} alt="" />
+                <img src={QrCodeIlustration} alt="" />
+
+                </div>
+
+        
+
+            </div>
         </section>
     )
 }

@@ -23,6 +23,30 @@
 	}
 }
 
+.SupportSection{
+	margin: 60px 0;
+	margin-left: 190px;
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+
+	:first-child{
+		margin-bottom:36px ;
+	}
+
+	.SupportButtons{
+		display: flex;
+		width: fit-content;
+		justify-content: space-between;
+		margin-top: 62px;
+		margin-bottom: 40px;
+
+		:first-child{
+			margin-right: 20px;
+		}
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.HomeMissionSection{
 		flex-direction: column;
@@ -31,8 +55,5 @@
 			display: none;
 		}
 	}
-
-    
-    
 }
 

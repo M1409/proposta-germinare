@@ -1,11 +1,11 @@
 import LightGallery from 'lightgallery/react';
 import 'lightgallery/scss/lightgallery.scss';
 import 'lightgallery/scss/lg-zoom.scss';
-import img from './Assets/img1.jpeg'
+import img from './Assets/Images/img1.jpeg'
 import styles from './Galery.module.scss'
 import { Typography } from '../../../../Components/Typography'
 import lgZoom from 'lightgallery/plugins/zoom';
-import ifull_screen from './Assets/ifull_screen.svg'
+import ifull_screen from './Assets/Images/ifull_screen.svg'
 export default function Galery(){
     const galery = [{image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}, {image: img, title: 'Ambiente'}]
     return(
