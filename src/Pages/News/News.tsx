@@ -1,4 +1,3 @@
-import styles from "./News.module.scss";
 import { NewsSection, NewsSectionProps } from "./Components";
 import {
   repasseValores,
