@@ -56,19 +56,20 @@ export function BeliefSection() {
     ]
 
     return (
-        <LayoutSection src={Beliefs} color='rgba(1, 22, 137, 0.8)' height={width <= 768 ? '1000px' : '576px'} id="BeliefBackGround">
-            <div className={styles.BeliefSectionTitle}>
-                <Typography color="white" variant="TypographySubtitle">
-                    Nossas Crenças
-                </Typography>
-            </div>
-
-            <div className={styles.BeliefCards}>
-                {cards.map(card => (
-                    <WhiteCard content={card.content}>
-                        <img src={card.icon} alt={card.content} />
-                    </WhiteCard>
-                ))}
+        <LayoutSection src={Beliefs} color='rgba(1, 22, 137, 0.8)' height='fit-content'>
+            <div style={{padding: '30px 10px'}}>
+                <div className={styles.BeliefSectionTitle}>
+                    <Typography color="white" variant="TypographySubtitle">
+                        Nossas Crenças
+                    </Typography>
+                </div>
+                <div className={styles.BeliefCards}>
+                    {cards.map(card => (
+                        <WhiteCard content={card.content}>
+                            <img src={card.icon} alt={card.content} />
+                        </WhiteCard>
+                    ))}
+                </div>
             </div>
         </LayoutSection>
     )

@@ -12,11 +12,11 @@ export function LayoutSection({children, src, color, height, shadow, ...props}:L
 
     return (
         <div className={styles.LayoutSection } style = {{backgroundImage: ` url(${src})`,height: height}} {...props}>
-            <span style = {{backgroundColor: color}}>
+            <div style = {{backgroundColor: color}}>
                 <div>
                     {children}
                 </div>
-            </span>
+            </div>
             {shadow? <div className={styles.backgroundShadow}></div> : <></>}
         </div>
     )
