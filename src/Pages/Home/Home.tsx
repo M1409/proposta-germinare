@@ -6,14 +6,13 @@ import { Button } from '../../Components/Button/Button'
 import { BeliefSection } from './Components/BeliefSection'
 import QrCode from './Assets/Images/QrCode.svg'
 import QrCodeIlustration from './Assets/Images/QrCodeIlustration.svg'
-import ContactForms from './ContactForms/ContactForms'
+import ContactForms from './Components/ContactForms/ContactForms'
 import useWindowDimensions from '../../hooks/useWindowDimensions'
 import Galery from './Components/Galery/Galery'
 
-export default function Home() {
+export function Home() {
 
     const { width } = useWindowDimensions();
-
 
     return (
         <section className='HomePage'>

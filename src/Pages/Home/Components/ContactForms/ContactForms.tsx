@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './ContactForms.module.scss'
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message';
-import { Typography, Button } from '../../../Components'
+import { Typography, Button } from '../../../../Components'
 import formsImage from './Assets/formsImage.png'
 import Snackbar, {SnackbarOrigin } from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
