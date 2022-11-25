@@ -74,7 +74,7 @@ export function Card({
           <img src={icon} />
           <p style={{ color: color }}>{name}</p>
         </div>
-        <Link to={url} >
+        <Link className={styles.NewsSectionLinkConfig} to={url} >
           <p className={styles.NewsSectionTextTitle}>{title}</p>
         </Link>
       </div>
