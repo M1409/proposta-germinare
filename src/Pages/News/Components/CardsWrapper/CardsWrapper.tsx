@@ -22,10 +22,10 @@ export function CardsWrapper({ news, ...props }: CardsWrapperProps) {
 
   return (
     <div className={styles.NewsContainerWrapper} {...props}>
-      {newsColumns.map((column) => (
-        <div className={styles.NewsSectionCardsContent}>
-          {column.map((news) => (
-            <Card {...news} />
+      {newsColumns.map((column, index) => (
+        <div key={index} className={styles.NewsSectionCardsContent}>
+          {column.map((news, index) => (
+            <Card key={index} {...news} />
           ))}
         </div>
       ))}
