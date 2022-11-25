@@ -81,6 +81,7 @@ export default function ContactForms() {
                     <div>
                         <span>Sua Mensagem</span>
                         <textarea className='textfield' id='message' placeholder="Ex: Tenho dúvidas em relação a determinados assuntos, como por exemplo: X, Y e Z." {...register("message", { required: { value: true, message: 'Esse campo é obrigatório.' } })} />
+                        <Error reference='message'></Error>
                     </div>
                     <Button variant='filled' type='submit' id={styles.btn}>Enviar</Button>
                 </form>

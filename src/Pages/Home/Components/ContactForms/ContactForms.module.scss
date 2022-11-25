@@ -1,7 +1,7 @@
 $horizontalPadding: 60px;
 .container{
     display: flex;
-    width: calc(100% - ($horizontalPadding * 2));
+    width: 100%;
     padding: 0 $horizontalPadding;
     img{
         width: 42%;
@@ -59,7 +59,7 @@ form{
     align-self: self-end;
 }
 #errorMessage{
-    color: #bf1650;
+    color: #bf1650 !important;
     margin-top: 5px;
 }
 @media screen and (max-width: 960px) {
@@ -74,15 +74,15 @@ form{
         }
     }
     form{
-        width: 60%;
+        width: 100%;
     }
     @media screen and (max-width: 670px) {
         .container img {
-            width: 62%;
-            height: 62%;
+            width: 82%;
+            height: 82%;
         }
         form{
-            width: 80%;
+            width: 100%;
         }
     }
 }
