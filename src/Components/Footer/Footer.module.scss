@@ -2,8 +2,8 @@
 $border: 30px;
 .footer{
     color: white;
-    width: calc(100% - ($padding-left * 2));
-    // position: absolute;
+    width: 100%;
+    position: relative;
     // bottom: 0;
     background-color: #272727;
     min-height: 24%;
@@ -82,6 +82,9 @@ $border: 30px;
             display: flex;
             flex-direction: column;
             line-height: 24px;
+        }
+        .posFooter{
+            left: 5%;
         }
     }
 }

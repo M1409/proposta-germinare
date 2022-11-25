@@ -5,7 +5,7 @@ import { Typography } from '../../Components/Typography'
 import CareerSection from './Components/CareerSection/CareerSection'
 import { WhiteCard } from '../../Components/WhiteCard'
 import OurHistory from './Components/OurHistory/OurHistory'
-export default function Admission() {
+export function Admission() {
     return (
         <>
             <WelcomeBanner bannerSrc={banner} title='Venha construir seu futuro. 
