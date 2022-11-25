@@ -125,4 +125,21 @@
 		margin-left: 50px;
 	}
 }
-
+// Carousel Style
+.HomePage .slick-dots{
+	bottom: 25px;
+	.slick-active{
+		div{
+			background-color: #2E3092
+		}
+	}
+	li:hover:not(.slick-active) div{
+		background-color: lighten($color: #011689, $amount: 40%);
+	}
+}
+.carouselHomeDot{
+	width: 15px;
+	height: 15px !important;
+	background-color: lighten(#272727, 48%);
+	border-radius: 50%;
+}
