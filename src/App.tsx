@@ -8,6 +8,7 @@ const Home = lazy(()=> import("./Pages/Home").then(({ Home }) => ({ default: Hom
 const Academic = lazy(()=> import("./Pages/Academic").then(({ Academic }) => ({ default: Academic })))
 const News = lazy(()=> import("./Pages").then(({ News }) => ({ default: News })))
 const Governance = lazy(()=> import("./Pages").then(({ Governance }) => ({ default: Governance })))
+const AboutUs = lazy(()=> import("./Pages").then(({ AboutUs }) => ({ default: AboutUs })))
 export default function App() {
   const { pathname } = useLocation();
   const isVirtualTour = pathname === "/tour";
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/home/governança" element={<Governance />} />
         <Route path="/tour" element={<VirtualTour />} />
         <Route path="/notícias" element={<News />} />
+        <Route path="/home/sobre-nós" element={<AboutUs />} />
       </Routes>
       <Footer style={{ display: isVirtualTour ? "none" : "block" }} />
     </div>

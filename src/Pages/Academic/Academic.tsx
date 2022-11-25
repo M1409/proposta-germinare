@@ -8,9 +8,8 @@ export function Academic() {
     <>
       <WelcomeBanner
         bannerSrc={banner}
-        title="Venha construir seu futuro. 
-        Matricule-se!"
-        titleWidth="75%"
+        title="Ensino de excelência e que te prepara para o mercado!"
+        titleWidth="58%"
       />
       <main className="mainContainer" id="academic">
         <section>

@@ -15,7 +15,7 @@ export function GeneralNavBar({...props}: Omit<NavBarProps, "navItems">) {
     },
     {
       label: "Sobre nós",
-      url: "",
+      url: "/home/sobre-nós",
     },
     {
       label: "Acadêmico",
