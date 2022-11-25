@@ -8,14 +8,15 @@ import QrCode from './Assets/Images/QrCode.svg'
 import QrCodeIlustration from './Assets/Images/QrCodeIlustration.svg'
 import ContactForms from './ContactForms/ContactForms'
 import useWindowDimensions from '../../hooks/useWindowDimensions'
+import Galery from './Components/Galery/Galery'
 
 export default function Home() {
 
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
 
     return (
-        <section>
+        <section className='HomePage'>
             <Carousel />
             <div className='HomeMissionSection'>
                 <section>
@@ -42,6 +43,13 @@ export default function Home() {
                 <img src={HomeMission} alt="" />
             </div>
             <BeliefSection />
+            <div className='GalerySection'>
+                <Typography width={width <= 768 ? '280px' : '410px'} variant='TypographySubtitle' color='#2E3092' id='GaleryTitle'>
+                    Galeria Germinare
+                </Typography>
+                <Galery/>
+            </div>
+
             <div className='SupportSection'>
                 <div className='SupportContainer'>
                     <div >
@@ -70,8 +78,8 @@ export default function Home() {
                         <img src={QrCodeIlustration} alt="" />
                     </div>
                 </div>
-                <Typography width={width <= 768 ? '360px' : '829px'} variant='TypographyParagraph' id='SupportLegal'>
-                    Caso seja Pessoa Jurídica ou queira fazer uma doação diretamente em nossa conta corrente, pedimos que por gentileza entre em contato conosco via instituto@germinare.org.br.
+                <Typography width={width <= 768 ? '300px' : '829px'} variant='TypographyParagraph' id='SupportLegal'>
+                    Caso seja Pessoa Jurídica ou queira fazer uma doação diretamente em nossa conta corrente, pedimos que por gentileza entre em contato conosco via  <span style={{color: '#2E3092', fontWeight: 700}}> instituto@germinare.org.br </span> .
                 </Typography>
             </div>
 
@@ -81,6 +89,7 @@ export default function Home() {
                 </Typography>
                 <ContactForms />
             </div>
+
         </section>
     )
 }
