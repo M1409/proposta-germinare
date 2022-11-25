@@ -1,0 +1,21 @@
+.NewsContainerWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.NewsSectionCardsContent {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(50% - 24px);
+  gap: 24px;
+}
+
+@media (max-width: 560px) {
+  .NewsContainerWrapper {
+    flex-direction: column;
+  }
+  .NewsSectionCardsContent {
+    max-width: 100%;
+  }
+}
