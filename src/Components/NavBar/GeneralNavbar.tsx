@@ -22,12 +22,12 @@ export function GeneralNavBar({...props}: Omit<NavBarProps, "navItems">) {
       url: "/home/acadêmico",
     },
     {
-      label: "Carreiras",
+      label: "Contato",
       url: "",
     },
     {
-      label: "Contato",
-      url: "",
+      label: "Notícias",
+      url: "/notícias"
     },
     {
       CustomItem: <SearchBar />,
