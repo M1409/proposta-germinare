@@ -18,8 +18,8 @@ export function GeneralNavBar({...props}: Omit<NavBarProps, "navItems">) {
       url: "",
     },
     {
-      label: "Cultura",
-      url: "",
+      label: "Acadêmico",
+      url: "/home/acadêmico",
     },
     {
       label: "Carreiras",
