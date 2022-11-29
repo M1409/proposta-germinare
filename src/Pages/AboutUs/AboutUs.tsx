@@ -1,6 +1,13 @@
+import { Values } from './Values'
 import './style.scss'
-export default function AboutUs(){
+import $ from 'jquery'
+
+export function AboutUs(){
     return(
-        <></>
+        <>
+
+            <Values/>
+            
+        </>
     )
 }
