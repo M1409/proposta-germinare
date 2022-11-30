@@ -1,6 +1,12 @@
 import './style.scss'
-export default function AboutUs(){
-    return(
-        <></>
+import { AcademicsTabs } from './Components/Tabs/Tabs'
+export function AboutUs() {
+    return (
+        <>
+
+            <AcademicsTabs />
+
+
+        </>
     )
 }

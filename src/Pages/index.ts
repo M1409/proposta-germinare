@@ -6,3 +6,4 @@ export * from './Home';
 export * from './LazyLoading';
 export * from './News';
 export * from './VirtualTour';
+export * from './AboutUs'

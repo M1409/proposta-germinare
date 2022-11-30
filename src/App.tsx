@@ -6,6 +6,7 @@ const Admission = lazy(()=> import("./Pages/Admission").then(({ Admission }) => 
 const VirtualTour = lazy(()=> import("./Pages/VirtualTour").then(({ VirtualTour }) => ({ default: VirtualTour })))
 const Home = lazy(()=> import("./Pages/Home").then(({ Home }) => ({ default: Home })))
 const Academic = lazy(()=> import("./Pages/Academic").then(({ Academic }) => ({ default: Academic })))
+const AboutUs = lazy(()=> import("./Pages/AboutUs").then(({ AboutUs }) => ({ default: AboutUs })))
 const News = lazy(()=> import("./Pages").then(({ News }) => ({ default: News })))
 const Governance = lazy(()=> import("./Pages").then(({ Governance }) => ({ default: Governance })))
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
     <div className="App">
       <GeneralNavBar style={{ display: isVirtualTour ? "none" : "block" }} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<AboutUs/>} />
         <Route path="home/acadêmico" element={<Academic />} />
         <Route path="/home/admissão" element={<Admission />} />
         <Route path="/home/governança" element={<Governance />} />

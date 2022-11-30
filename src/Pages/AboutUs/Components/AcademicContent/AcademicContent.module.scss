@@ -1,0 +1,22 @@
+.AcademicContentContainer{
+    margin: 46px  0 46px 0;
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+
+.ChipsContainer{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 36px;
+    justify-content: space-between;
+}
+
+
+.Chip{
+    width: fit-content;
+    border: 1px solid #2E3092;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
