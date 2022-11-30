@@ -18,7 +18,7 @@ import { Typography } from "../../../../Components/Typography";
 import lgZoom from "lightgallery/plugins/zoom";
 import ifull_screen from "./Assets/Images/ifull_screen.svg";
 
-export default function Galery() {
+export  function Galery() {
   const galery = [
     { image: img1, title: "Praça" },
     { image: img2, title: "Jardim" },

@@ -20,7 +20,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 ) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
-export default function ContactForms() {
+export function ContactForms() {
     const [state, setState] = React.useState<State>({
         vertical: 'top',
         horizontal: 'right',

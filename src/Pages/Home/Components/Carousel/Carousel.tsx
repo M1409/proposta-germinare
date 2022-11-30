@@ -11,7 +11,7 @@ import c4 from './Assets/Images/c4.png'
 import $ from 'jquery';
 import { useEffect } from 'react';
 import './animation.scss'
-export default function Carousel() {
+export  function Carousel() {
   const data = [
     {
       image: bg,
