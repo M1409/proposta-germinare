@@ -13,7 +13,7 @@ export type WelcomeBannerProps = {
 
 export function WelcomeBanner({bannerSrc,titleWidth,...props}:WelcomeBannerProps) {
     return (
-        <LayoutSection src={bannerSrc} height='400px' {...props} shadow>
+        <LayoutSection src={bannerSrc} height='400px' {...props} shadow position="absolute">
             <div className={styles.WelcomeContainer}>
                 <Typography variant="TypographyTitle" color="white" width={titleWidth}>{props.title} </Typography>
                 <Breadcrumbs crumbInitialColor="white" />

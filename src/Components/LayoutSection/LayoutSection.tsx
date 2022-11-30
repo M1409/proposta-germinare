@@ -6,13 +6,14 @@ export type LayoutSectionProps = {
     height?: string
     color?: string
     shadow?: boolean
+    position? : 'absolute' | 'static'
 } &  DetailedHTMLProps<ButtonHTMLAttributes<HTMLDivElement>, HTMLDivElement>
 
-export function LayoutSection({children, src, color, height, shadow, ...props}:LayoutSectionProps){
+export function LayoutSection({children, src, color, height, shadow, position='static', ...props}:LayoutSectionProps){
 
     return (
         <div className={styles.LayoutSection } style = {{backgroundImage: ` url(${src})`,height: height}} {...props}>
-            <div style = {{backgroundColor: color}} className={styles.bg}>
+            <div style = {{backgroundColor: color, position: position}} className={styles.bg}>
                 <div>
                     {children}
                 </div>
