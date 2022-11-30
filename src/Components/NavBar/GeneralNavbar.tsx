@@ -31,6 +31,7 @@ export function GeneralNavBar({...props}: Omit<NavBarProps, "navItems">) {
     },
     {
       CustomItem: <SearchBar />,
+      closeOnClick: false
     },
     {
       CustomItem: <Button variant="outlined" onClick={()=>{
