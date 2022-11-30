@@ -1,0 +1,36 @@
+#aboutUsWelcomeBanner{
+    background-position: 85% 0;
+}
+.mainContainer#aboutUs section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    strong{
+        font-weight: 700;
+    }
+    margin-bottom: 60px;
+}
+.mainContainer#aboutUs .mission{
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+    div{
+        p:last-child{
+            margin-top: 30px;
+        }
+    }
+    img{
+        width: 48%;
+        height: 48%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .mainContainer#aboutUs .mission{
+        flex-direction: column;
+        gap: 40px;
+        img{
+            width: 88%;
+            height: 88%;
+        }
+    }
+}

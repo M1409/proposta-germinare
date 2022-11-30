@@ -23,7 +23,7 @@ export default function App() {
         <Route path="/home/governança" element={<Governance />} />
         <Route path="/tour" element={<VirtualTour />} />
         <Route path="/notícias" element={<News />} />
-        <Route path="/sobre-nós" element={<AboutUs />} />
+        <Route path="/home/sobre-nós" element={<AboutUs />} />
       </Routes>
       <Footer style={{ display: isVirtualTour ? "none" : "block" }} />
     </div>
