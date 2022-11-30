@@ -1,1 +1,1 @@
-export * from './Values';
+export * from './Values'
