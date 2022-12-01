@@ -1,4 +1,4 @@
-import { Typography } from '../../../../Components/Typography'
+import { Typography } from '../../../../Components'
 import {Link} from 'react-router-dom'
 import styles from './CTATourVirtual.module.scss'
 import { icon360, iconPlay, schoolImage } from './Assets/Images'
@@ -13,7 +13,7 @@ export function CTATourVirtual() {
             <img className={styles.imgTourVirtual} src={schoolImage}></img>
             <div className={styles.blueDivTourVirtual}>
                 <img className={styles.iconImg360Tour} src={icon360}></img>
-                <Typography color='white' width='fit-content' variant='TypographySubtitle' id={styles.fontSizeSetup}>Conheça a escola</Typography>
+                <Typography color='white' width='fit-content' variant='TypographySmallImage'>Conheça a escola</Typography>
             </div>
     </div>
     </Link>

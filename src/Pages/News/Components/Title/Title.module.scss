@@ -1,11 +1,7 @@
 .titleConfig{
-  font-size: 32px;
-  color: #011689;
-  font-weight: 600;
+  font-size: 24px;
+  color: #2E3092;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-@media (max-width: 560px) {
-  .titleConfig{
-    font-size: 24px;
-  }
-}
