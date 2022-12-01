@@ -5,9 +5,10 @@ import styles from './WhiteCard.module.scss'
 export type WhiteCardProps = {
     content:string
     width?:string
+    height?:string
 } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 
-export function WhiteCard({content,width,children,...props}:WhiteCardProps){
+export function WhiteCard({content,width,children, height,...props}:WhiteCardProps){
     return(
         <div className={styles.WhiteCard}>
             <div className={styles.WhiteCardIcon}>
