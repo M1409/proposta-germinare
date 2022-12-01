@@ -37,7 +37,7 @@ export default function FamilySchool() {
             <Typography color="#2E3092" variant="TypographySubtitle">
                 Germinare: a Escola da Família
             </Typography>
-            <Typography variant="TypographyParagraph">
+            <Typography variant="TypographyParagraph" id={styles.FamilySchoolDescription}>
                 Venha nos conhecer um pouco mais! Entenda as 3 etapas desse novo curso:
             </Typography>
 
