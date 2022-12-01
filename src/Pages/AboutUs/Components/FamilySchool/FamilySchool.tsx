@@ -11,7 +11,7 @@ type FamilySchoolCards = {
 }
 
 
-export default function FamilySchool() {
+export function FamilySchool() {
 
 
     const FamilySchoolCards: FamilySchoolCards[] = [{
