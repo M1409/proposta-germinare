@@ -1,40 +1,38 @@
 import { Button } from "../index";
 import { SearchBar, NavBar, NavBarProps } from "./index";
 import { useNavigate } from "react-router-dom";
+import { routes } from "../../Router";
 
 export function GeneralNavBar({...props}: Omit<NavBarProps, "navItems">) {
   const navigate = useNavigate()
   const navItems = [
     {
       label: "Tour virtual",
-      url: "/tour",
+      url: routes.virtualTour,
     },
     {
       label: "Governança",
-      url: "/home/governança",
+      url: routes.governance,
     },
     {
       label: "Sobre nós",
-      url: "",
+      url: routes.aboutUs,
     },
     {
       label: "Acadêmico",
-      url: "/home/acadêmico",
-    },
-    {
-      label: "Contato",
-      url: "",
+      url: routes.academic,
     },
     {
       label: "Notícias",
-      url: "/notícias"
+      url: routes.news
     },
     {
       CustomItem: <SearchBar />,
+      closeOnClick: false
     },
     {
       CustomItem: <Button variant="outlined" onClick={()=>{
-        navigate('/home/admissão')
+        navigate(routes.admission)
       }}>Admissão</Button>,
     },
   ];

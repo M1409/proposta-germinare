@@ -7,3 +7,4 @@ export * from './NavBar';
 export * from './Typography';
 export * from './WelcomeBanner';
 export * from './WhiteCard';
+export * from './GeneralRouteWrapper';

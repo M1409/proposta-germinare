@@ -125,13 +125,15 @@ html {
 }
 
 .container {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #001950;
     flex-direction: column;
-    // gap: 140px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
 }
 .logo{
     max-width: 76%;

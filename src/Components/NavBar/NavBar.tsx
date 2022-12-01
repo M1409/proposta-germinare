@@ -8,6 +8,7 @@ export type NavBarProps = {
     label?: string;
     url?: string; //rota
     CustomItem?: React.ReactNode;
+    closeOnClick?: boolean
   }[];
   hamburguerMenu?: boolean;
 } & React.HTMLProps<HTMLDivElement>;
@@ -30,16 +31,16 @@ export function NavBar({ navItems, hamburguerMenu = true, ...props }: NavBarProp
           ${openMenu ? style.open : ''}
           `}
         >
-          {navItems.map(({ label, url, CustomItem }, index) => {
-            if (CustomItem) {
-              return <li key={index}>{CustomItem}</li>;
-            } else {
-              return (
-                <li key={index}>
-                  <Link to={`${url}`}>{label}</Link>
-                </li>
-              );
-            }
+          {navItems.map(({ label, url, CustomItem, closeOnClick=true }, index) => {
+            return(
+              <li key={index}  onClick={() => {
+                if(closeOnClick){
+                  setOpenMenu(false)
+                }
+              }}>
+                {CustomItem ? CustomItem : <Link to={`${url}`}>{label}</Link>}
+              </li>
+            )
           })}
         </ul>
         <button
