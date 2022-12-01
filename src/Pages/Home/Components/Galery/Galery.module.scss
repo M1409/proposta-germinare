@@ -1,7 +1,6 @@
-.galeryContainer:first-child div{
+.galeryContainer div{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
     margin: auto;
     cursor: pointer;
@@ -21,7 +20,7 @@
     .titleContainer{
         background-color: #040e4b;
         height: 20%;
-        width: calc(100% - 10px);
+        width: 100%;
         display: flex;
         align-items: center;
         padding-left: 10px;

@@ -2,16 +2,16 @@ import styles from './Carousel.module.scss'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import bg from '../../Assets/Images/bg.png'
+import bg from './Assets/Images/bg.png'
 import { Typography } from '../../../../Components/Typography';
-import Button from '../../../../Components/Button/Button';
+import {Button} from '../../../../Components';
 import c2 from './Assets/Images/c2.png'
 import c3 from './Assets/Images/c3.png'
 import c4 from './Assets/Images/c4.png'
 import $ from 'jquery';
 import { useEffect } from 'react';
 import './animation.scss'
-export default function Carousel() {
+export  function Carousel() {
   const data = [
     {
       image: bg,
@@ -20,6 +20,7 @@ export default function Carousel() {
         bigtitle: "FORMANDO GESTORES",
         buttonContent: "Inscreva-se",
       },
+      position: '90%'
     },
     {
       image: c2,
@@ -28,6 +29,7 @@ export default function Carousel() {
         bigtitle: "ENCONTRO DE VALORES",
         buttonContent: "Saiba mais",
       },
+      position: '90%'
     },
     {
       image: c3,
@@ -36,19 +38,21 @@ export default function Carousel() {
         bigtitle: "TECNOLOGIA",
         buttonContent: "Inscreva-se",
       },
+      position: '70%'
     },
     {
       image: c4,
       content: {
-        title: "Assista a nossa retrospectiva de ",
+        title: "Assista aos nossos",
         bigtitle: "12 ANOS DE HISTÓRIA",
         buttonContent: "Assistir",
       },
+      position: '90%'
     }
   ]
   const activeAnimation = ()=>{
-    const tp = $(`.typography-title`)
-    const bt = $(`.button-filled`)
+    const tp = $('*[data-typography="carousel"]')
+    const bt = $('*[data-button="carousel"]')
     tp.removeClass('animation-typography')
     bt.removeClass('animation-button')
     setTimeout(()=>{
@@ -66,17 +70,23 @@ export default function Carousel() {
     slidesToScroll: 1,
     beforeChange: activeAnimation,
     autoplay: true,
-    autoplaySpeed: 6000
+    autoplaySpeed: 6000,
+    customPaging: () => (
+      <div
+        className="carouselHomeDot"
+      >
+      </div>
+    )
   };
   const slides = () =>
     data.map((item, index) => (
       <div>
-        <div style={{ backgroundImage: `url(${item.image})`, width: '100%' }} className={styles.main}>
+        <div style={{ backgroundImage: `url(${item.image})`, width: '100%', backgroundPosition: item.position }} className={styles.main}>
           <span className={styles.darkbg}>
             <div className={styles.carousel_content}>
-              <Typography id={`${index - 1}`} variant='TypographyTitle' color='white'>{item.content.title} <br></br>
+              <Typography variant='TypographyTitle' data-typography='carousel' color='white'>{item.content.title} <br></br>
                 <span style={{ color: '#4057D8' , textTransform: 'capitalize'}}>{item.content.bigtitle}</span></Typography>
-                <Button id={`${index - 1}`} variant='button-filled'>{item.content.buttonContent}</Button>
+                <Button data-button='carousel' variant='filled'>{item.content.buttonContent}</Button>
             </div>
           </span>
         </div>
@@ -86,7 +96,7 @@ export default function Carousel() {
   return (
     <>
     <div>
-      <Slider {...settings} className={styles.slider}>
+      <Slider {...settings} className={styles.slider}  >
         {slides()}
       </Slider>
     </div>

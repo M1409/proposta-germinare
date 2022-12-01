@@ -1,33 +1,47 @@
 import { Link } from "react-router-dom";
+import "./Breadcrumbs.module.scss";
 import { useRouter } from "../../hooks/useRouter";
-import './Breadcrumbs.module.scss'
-import { PathType } from "../../hooks/useRouter";
 
 export type BreadcrumbsProps = {
-    crumbColor: string
-    crumbInitialColor: string
+  crumbInitialColor?: string;
+};
+
+export type CrumbProps = {
+  href: string;
+  label: string;
+  color?: string;
+  separator?: string;
+};
+
+export function Crumb({ href, color, label, separator = "|" }: CrumbProps) {
+  return (
+    <Link
+      className="crumbs"
+      to={href}
+      style={{ textDecoration: "none", color: color }}
+    >
+      {` ${separator} ${label}`}
+    </Link>
+  );
 }
 
-export function Breadcrumbs({crumbColor,crumbInitialColor, ...props}:BreadcrumbsProps) {
+export function Breadcrumbs({
+  crumbInitialColor = "white",
+  ...props
+}: BreadcrumbsProps) {
+  const [routes] = useRouter();
 
-    const [routes] = useRouter()
-
-    function returnCrumb(item:PathType){
-        let crumb = '|'
-        let color = crumbInitialColor
-        if (routes.indexOf(item) === routes.length - 1){
-            crumb = ''
-            color = crumbColor
-        }
-        return <Link className="crumbs" to = {item.href} style = {{textDecoration: 'none', color: color}}> {item.label + ' ' + crumb} </Link>
-    }
-
-    return (
-        <div {...props}>
-            {routes.map(item => (
-                returnCrumb(item)
-            ))}
-        </div>
-    )
-
+  return (
+    <div {...props}>
+      <Crumb
+        color={crumbInitialColor}
+        separator=""
+        href={routes[0].href}
+        label={routes[0].label}
+      />
+      {routes.slice(1).map((it) => (
+        <Crumb color="#95A5FC" {...it} />
+      ))}
+    </div>
+  );
 }
