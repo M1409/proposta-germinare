@@ -15,7 +15,7 @@ export function AboutUs() {
                 id="aboutUsWelcomeBanner"
             ></WelcomeBanner>
             <ContentSpacer id="aboutUs">
-                <section className="mission">
+                <section className="mission section">
                     <div>
                         <Typography variant="TypographySubtitle" color="#2E3092">
                             Nossa Missão
@@ -41,32 +41,35 @@ export function AboutUs() {
                     </div>
                     <img src={mission} alt="alunos da escola" />
                 </section>
-                <section>
+                <div>
                     <Certificates />
-                </section>
+                </div>
 
                 <section>
-                    <div style = {{marginBottom: '40px'}}>
+                    <div style={{ marginBottom: '40px' }}>
                         <Typography variant="TypographySubtitle" color="#2E3092">
                             O que são Academias Germinare?
                         </Typography>
 
                         <Typography variant="TypographyParagraph" id="AcademicDescription">
-                        A escola Germinare, por meio de um currículo inovador, proporciona o diploma de Técnico em Administração de Empresas ao concluir o Ensino Médio. Para isso, dividimos as disciplinas em áreas do conhecimento, as Academias Germinare.
+                            A escola Germinare, por meio de um currículo inovador, proporciona o diploma de Técnico em Administração de Empresas ao concluir o Ensino Médio. Para isso, dividimos as disciplinas em áreas do conhecimento, as Academias Germinare.
 
-                        <br/>
-                        <br/>
+                            <br />
+                            <br />
 
-                        Assim como todos os trabalhos com bons resultados, há um grupo de pessoas diferentes contribuindo com os seus melhores atributos para concluir o objetivo da equipe. No caso das Academias, temos a parceria de seis empresas do Grupo J&F: <strong> Banco Original, Friboi, Flora, Seara, PicPay e Swift</strong>.
+                            Assim como todos os trabalhos com bons resultados, há um grupo de pessoas diferentes contribuindo com os seus melhores atributos para concluir o objetivo da equipe. No caso das Academias, temos a parceria de seis empresas do Grupo J&F: <strong> Banco Original, Friboi, Flora, Seara, PicPay e Swift</strong>.
 
                         </Typography>
                     </div>
-                    <AcademicsTabs/>
+                    <AcademicsTabs />
                 </section>
-                
+                <div>
+                    <FamilySchool />
+                </div>
+
                 <Values />
             </ContentSpacer>
-            <ImpactPhrase/>
+            <ImpactPhrase />
         </>
     );
 }
