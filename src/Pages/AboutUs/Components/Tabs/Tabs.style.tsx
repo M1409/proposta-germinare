@@ -2,7 +2,6 @@ import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-
 type StyledTabProps = {
     label: string;
 }
@@ -48,10 +47,10 @@ export const StyledTab = styled((props: StyledTabProps) => <Tab {...props} />)(
         textTransform: 'none',
         color: 'white',
         fontWeight: theme.typography.fontWeightMedium,
+        fontSize: '16px',
         '&.Mui-selected': {
             fontWeight: theme.typography.fontWeightBold,
-            bacgroundColor: 'white'
-
+            color: 'white'
         },
     }),
 );

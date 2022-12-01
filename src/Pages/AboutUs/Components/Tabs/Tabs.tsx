@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react'
 import AcademicContent from '../AcademicContent/AcademicContent'
 import img_seara from '../Tabs/Assets/Images/img_seara.png'
 import useWindowDimensions from '../../../../hooks/useWindowDimensions';
@@ -31,7 +32,7 @@ export function AcademicsTabs() {
 
     const { width } = useWindowDimensions()
 
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -41,12 +42,11 @@ export function AcademicsTabs() {
 
     return (
         <>
-
             <div>
                 <div>
                     <StyledTabs value={value} onChange={handleChange}>
-                        <StyledTab label='Academia Swift' />
-                        <StyledTab label="Academia Seara" />
+                        <StyledTab label='Academia Seara' />
+                        <StyledTab label="Academia Swift" />
                         <StyledTab label="Academia Friboi" />
                         <StyledTab label="Academia PicPay" />
                         <StyledTab label="Academia Original" />
