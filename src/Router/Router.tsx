@@ -18,8 +18,11 @@ const Home = lazy(() =>
 const Academic = lazy(() =>
   import("../Pages").then(({ Academic }) => ({ default: Academic }))
 );
-const News = lazy(() =>
-  import("../Pages").then(({ News }) => ({ default: News }))
+const LatestAndAllNews = lazy(() =>
+  import("../Pages").then(({ LatestAndAllNews }) => ({ default: LatestAndAllNews }))
+);
+const NewsInformation = lazy(() =>
+  import("../Pages").then(({ NewsInformation }) => ({ default: NewsInformation }))
 );
 const Governance = lazy(() =>
   import("../Pages").then(({ Governance }) => ({ default: Governance }))
@@ -38,7 +41,9 @@ export function Router() {
             <Route path={routes.academic} element={<Academic />} />
             <Route path={routes.admission} element={<Admission />} />
             <Route path={routes.governance} element={<Governance />} />
-            <Route path={routes.news} element={<News />} />
+            <Route path={routes.news} element={<LatestAndAllNews />}>
+              <Route path=":news-title" element={<NewsInformation />}/>
+            </Route>
             <Route path={routes.aboutUs} element={<AboutUs />} />
           </Route>
           <Route path={routes.virtualTour} element={<VirtualTour />} />
