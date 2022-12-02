@@ -7,7 +7,7 @@ import criancaLogo from './Assets/criancasLogo.png'
 import publicaFederal from './Assets/publicaFederal.png'
 import Arrow from './Assets/Arrow.png'
 import cebas from './Assets/cebas.png'
-import useWindowDimensions from '../../../hooks/useWindowDimensions'
+import {useWindowDimensions} from '../../../hooks'
 
 export function Certificates (){
     return (
