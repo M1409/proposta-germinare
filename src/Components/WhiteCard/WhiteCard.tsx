@@ -9,7 +9,7 @@ export type WhiteCardProps = {
 
 export function WhiteCard({content,width,children,...props}:WhiteCardProps){
     return(
-        <div className={styles.WhiteCard}>
+        <div className={styles.WhiteCard} {...props}>
             <div className={styles.WhiteCardIcon}>
                 {children}
             </div>

@@ -1,15 +1,14 @@
-import style from './Button.module.scss'
+import './style.scss'
 import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react'
 
 export type ButtonProps = {
-    variant?: "filled" | "outlined";
-    width?:string
-    height?: string
+    variant: "button-filled" | "button-outlined"
 } & DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
-export function Button({ children, variant = "filled", width, height,  ...props }: ButtonProps) {
+export default function Button({ children, variant, ...props }: ButtonProps) {
+
     return (
-        <button className={`${style.button} ${style[variant]}`} style = {{width: width, height: height}} {...props}>
+        <button  {...props} className={variant}>
             {children}
         </button>
     )
