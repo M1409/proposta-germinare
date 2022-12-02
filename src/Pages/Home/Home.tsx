@@ -1,7 +1,8 @@
 import './style.scss'
+import { Error404 } from '../Error404/index'
 import HomeMission from './Assets/Images/HomeMission.png'
 import { Typography } from '../../Components/Typography'
-import {Carousel, BeliefSection, SuportSection, ContactForms} from './Components'
+import {Carousel, BeliefSection, SuportSection, ContactForms, CTATourVirtual} from './Components'
 export function Home() {
 
     return (
@@ -34,6 +35,7 @@ export function Home() {
             <BeliefSection />
 
             <div className="mainContainer">
+                <CTATourVirtual />
                 <SuportSection/>
                 <div className='FormsSection'>
                     <Typography variant='TypographySubtitle' color='#2E3092'>
@@ -42,7 +44,7 @@ export function Home() {
                     <ContactForms />
                 </div>
             </div>
-
         </section>
+        
     )
 }
