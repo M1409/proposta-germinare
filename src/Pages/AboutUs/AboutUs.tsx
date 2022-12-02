@@ -2,7 +2,7 @@ import { Values } from "./Values";
 import "./style.scss";
 import { WelcomeBanner, Typography } from "../../Components";
 import { banner, mission } from "./Assets/Images";
-import { Certificates } from "./Components";
+import Certificados from "./Certificate/certificado";
 import { ContentSpacer } from "../../Components";
 
 export function AboutUs() {
@@ -42,7 +42,7 @@ export function AboutUs() {
           <img src={mission} alt="alunos da escola" />
         </section>
         <section>
-          <Certificates />
+          <Certificados />
         </section>
         <Values />
       </ContentSpacer>
