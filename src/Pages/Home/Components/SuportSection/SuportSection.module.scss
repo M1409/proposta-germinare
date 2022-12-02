@@ -1,20 +1,17 @@
-.SupportSection {
-  :first-child {
-    margin-bottom: 36px;
-  }
 
-  .SupportButtons {
-    display: flex;
-    width: fit-content;
-    margin-top: 62px;
-    :first-child {
-      margin-right: 20px;
-    }
+.SupportSection {
+  strong.picpay{
+    font-weight: 700;
+    color: #11C76F;
+  }
+  p:first-child {
+    margin-bottom: 36px;
   }
 
   .SupportContainer {
     display: flex;
     gap: 60px;
+    align-items: center;
   }
 
   #SupportLegal {
@@ -24,7 +21,11 @@
   .SupportImgs {
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
+    img{
+      width: 500px;
+      height: 500px;
+    }
+
   }
 }
 @media screen and (max-width: 1070px) {
@@ -48,10 +49,11 @@
         display: flex;
         width: 100%;
         gap: 15px;
-        :first-child {
-          margin-right: 0px;
-          margin-top: 0px;
-        }
+        width: fit-content;
+        margin-top: 42px;
+      }
+      .SupportImgs{
+        display: none;
       }
     }
   }

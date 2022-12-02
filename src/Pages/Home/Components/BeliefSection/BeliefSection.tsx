@@ -11,7 +11,7 @@ import hands from './Assets/Images/hands.svg'
 import target from './Assets/Images/target.svg'
 import sunny from './Assets/Images/sunny.svg'
 import styles from './BeliefSection.module.scss'
-import useWindowDimensions from "../../../../hooks/useWindowDimensions"
+import {useWindowDimensions} from "../../../../hooks"
 
 
 export function BeliefSection() {
