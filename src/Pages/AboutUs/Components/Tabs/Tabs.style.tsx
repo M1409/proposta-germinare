@@ -19,11 +19,12 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
         TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan"
         /> 
     }}
+    allowScrollButtonsMobile
     />
 ))({
     backgroundColor: 'rgba(2, 14, 79, 0.9)',
-    width: '100%',
     height: '68px',
+    maxWidth:'100%',
     alignItems: 'center',
     '& .MuiTabs-indicator': {
         display: 'flex',
@@ -37,19 +38,21 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
     },
     '& .MuiTabs-flexContainer': {
         justifyContent: 'space-around',
-
     },
 
     '@media only screen and (max-width: 768px)': {
-        '& .MuiTabs-flexContainer': {
-            
-        },
+        '& .MuiTabs-flexContainer':{
+            justifyContent: 'normal',
+        }
+        
     }
+    
 });
 
 export const StyledTab = styled((props: StyledTabProps) => <Tab {...props} />)(
     ({ theme }) => ({
         textTransform: 'none',
+        minWidth: 'fit-content',
         color: 'white',
         fontWeight: theme.typography.fontWeightMedium,
         fontSize: '16px',

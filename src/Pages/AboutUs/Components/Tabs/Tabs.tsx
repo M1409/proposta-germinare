@@ -56,10 +56,19 @@ export function AcademicsTabs() {
                     <AcademicContent src={img_seara} title='Academia Seara' chips={chipsSeara} description='A Academia de Bens de Consumo busca formar tocadores de negócio e, por meio da Metodologia de Casos de Ensino, trabalha o desafio do negócio como instrumento de aprendizagem sobre a complexidade organizacional. Com execuções práticas, leva para a sala de aula situações reais e conhecimento sobre as marcas, sobre as áreas do comercial, do marketing, do produto e do Supply Chain.' descriptionWidth={width <= 768 ? '300px' : '569px'} />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    Item Two
+                    <AcademicContent src={img_seara} title='Academia Swift' chips={chipsSeara} description='A Academia de Bens de Consumo busca formar tocadores de negócio e, por meio da Metodologia de Casos de Ensino, trabalha o desafio do negócio como instrumento de aprendizagem sobre a complexidade organizacional. Com execuções práticas, leva para a sala de aula situações reais e conhecimento sobre as marcas, sobre as áreas do comercial, do marketing, do produto e do Supply Chain.' descriptionWidth={width <= 768 ? '300px' : '569px'} />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    Item Three
+                    <AcademicContent src={img_seara} title='Academia Friboi' chips={chipsSeara} description='A Academia de Bens de Consumo busca formar tocadores de negócio e, por meio da Metodologia de Casos de Ensino, trabalha o desafio do negócio como instrumento de aprendizagem sobre a complexidade organizacional. Com execuções práticas, leva para a sala de aula situações reais e conhecimento sobre as marcas, sobre as áreas do comercial, do marketing, do produto e do Supply Chain.' descriptionWidth={width <= 768 ? '300px' : '569px'} />
+                </TabPanel>
+                <TabPanel value={value} index={3}>
+                    <AcademicContent src={img_seara} title='Academia PicPay' chips={chipsSeara} description='A Academia de Bens de Consumo busca formar tocadores de negócio e, por meio da Metodologia de Casos de Ensino, trabalha o desafio do negócio como instrumento de aprendizagem sobre a complexidade organizacional. Com execuções práticas, leva para a sala de aula situações reais e conhecimento sobre as marcas, sobre as áreas do comercial, do marketing, do produto e do Supply Chain.' descriptionWidth={width <= 768 ? '300px' : '569px'} />
+                </TabPanel>
+                <TabPanel value={value} index={4}>
+                    <AcademicContent src={img_seara} title='Academia Original' chips={chipsSeara} description='A Academia de Bens de Consumo busca formar tocadores de negócio e, por meio da Metodologia de Casos de Ensino, trabalha o desafio do negócio como instrumento de aprendizagem sobre a complexidade organizacional. Com execuções práticas, leva para a sala de aula situações reais e conhecimento sobre as marcas, sobre as áreas do comercial, do marketing, do produto e do Supply Chain.' descriptionWidth={width <= 768 ? '300px' : '569px'} />
+                </TabPanel>
+                <TabPanel value={value} index={5}>
+                    <AcademicContent src={img_seara} title='Academia Seara' chips={chipsSeara} description='A Academia de Bens de Consumo busca formar tocadores de negócio e, por meio da Metodologia de Casos de Ensino, trabalha o desafio do negócio como instrumento de aprendizagem sobre a complexidade organizacional. Com execuções práticas, leva para a sala de aula situações reais e conhecimento sobre as marcas, sobre as áreas do comercial, do marketing, do produto e do Supply Chain.' descriptionWidth={width <= 768 ? '300px' : '569px'} />
                 </TabPanel>
             </div>
         </>
