@@ -1,12 +1,10 @@
 #FamilySchoolDescription{
     margin-top: 22px;
     margin-bottom: 44px;
-    color: red;
 }
 
 .FamilySchoolCardsContainer{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -31,8 +29,10 @@
             margin: 22px 0 40px 0;
         }
     }
-
 }
+
+
+
 
 
 

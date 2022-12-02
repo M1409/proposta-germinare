@@ -45,13 +45,13 @@ export function AboutUs() {
                     <Certificates />
                 </div>
 
-                <section>
+                <section style = {{marginTop: '90px', marginBottom: '70px'}}>
                     <div style={{ marginBottom: '40px' }}>
-                        <Typography variant="TypographySubtitle" color="#2E3092">
+                        <Typography variant="TypographySubtitle" color="#2E3092" width="90%">
                             O que são Academias Germinare?
                         </Typography>
 
-                        <Typography variant="TypographyParagraph" id="AcademicDescription">
+                        <Typography variant="TypographyParagraph" id="AcademicDescription" width="90%">
                             A escola Germinare, por meio de um currículo inovador, proporciona o diploma de Técnico em Administração de Empresas ao concluir o Ensino Médio. Para isso, dividimos as disciplinas em áreas do conhecimento, as Academias Germinare.
 
                             <br />
@@ -63,7 +63,8 @@ export function AboutUs() {
                     </div>
                     <AcademicsTabs />
                 </section>
-                <div>
+
+                <div style = {{marginBottom: '70px'}}>
                     <FamilySchool />
                 </div>
 
