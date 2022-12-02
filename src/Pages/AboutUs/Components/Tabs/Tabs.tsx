@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react'
 import AcademicContent from '../AcademicContent/AcademicContent'
 import img_seara from '../Tabs/Assets/Images/img_seara.png'
-import useWindowDimensions from '../../../../hooks/useWindowDimensions';
+import {useWindowDimensions} from '../../../../hooks';
 
 import { StyledTab, StyledTabs } from './Tabs.style'
 

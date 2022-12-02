@@ -9,7 +9,7 @@ import Arrow from './Assets/Arrow.png'
 import cebas from './Assets/cebas.png'
 import Arrow4 from './Assets/Arrow4.svg'
 
-import useWindowDimensions from '../../../../hooks/useWindowDimensions'
+import {useWindowDimensions} from '../../../../hooks'
 
 
 
