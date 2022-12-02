@@ -4,6 +4,16 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+
+    & h2 {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        max-width: 227.44px;
+        width: 100%;
+        color: #030E4F;
+        padding-top: 28px;
+    }
 }
 
 .containerCards {
@@ -26,15 +36,7 @@
     padding-right: -10px;
 }
 
-h2 {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    max-width: 227.44px;
-    width: 100%;
-    color: #030E4F;
-    padding-top: 28px;
-}
+
 
 .teste {
     width: 90%;

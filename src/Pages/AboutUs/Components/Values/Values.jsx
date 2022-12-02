@@ -229,8 +229,8 @@ export function Values() {
         </svg>
       </div>
       <div ref={descriptionContainerRef} className={styles.ValueDescriptionContainer}>
-        <Typography variant='TypographySectionTitle' color='#2E3092' width='250px'>{currentValue.name}</Typography>
-        <Typography variant='TypographyParagraph' color='#323232' width='700px'>{currentValue.description}</Typography>
+        <Typography variant='TypographySectionTitle' color='#2E3092' width='250px' >{currentValue.name}</Typography>
+        <Typography variant='TypographyParagraph' color='#323232' width='700px' style={{whiteSpace:"pre-wrap"}}>{currentValue.description}</Typography>
       </div>
     </div>
   );

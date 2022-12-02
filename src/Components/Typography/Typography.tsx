@@ -2,7 +2,7 @@ import './style.scss'
 
 export type TypographyProps = {
     variant?: 'TypographyParagraph' | 'TypographySubtitle' | 'TypographyTitle' | 'TypographySectionTitle' | 'TypographySmallImage'
-    color?: '#2E3092' | 'white'  | '#323232'
+    color?: '#2E3092' | 'white'  | '#323232' | string
     width?: string
     weight?:string
     size?:string
