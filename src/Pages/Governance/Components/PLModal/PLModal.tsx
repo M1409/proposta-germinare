@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Button } from '../../../../Components/Button/Button';
+import { Button} from '../../../../Components/Button/Button';
+import { Typography } from '../../../../Components';
 import styles from './PLModal.module.scss'
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
@@ -8,7 +9,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton'; 
 import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -73,34 +73,32 @@ export function PLModal() {
           Dados Solicitados
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <Typography component={'span'} gutterBottom>
           <div className={styles.tableContainer}>
           <div>
               <p className={styles.tableTitle}>Informações Necessárias</p>
               <div  className={styles.tableDiv}>
-                <li className={styles.tableText}>Nome;</li>
-                <li className={styles.tableText}>E-Mail;</li>
-                <li className={styles.tableText}>Gênero;</li>
-                <li className={styles.tableText}>Data de Nascimento;</li>
-                <li className={styles.tableText}>Número do CPF;</li>
-                <li className={styles.tableText}>Número do RG;</li>
-                <li className={styles.tableText}>Órgão Expedidor do RG;</li>
-                <li className={styles.tableText}>Endereço (CEP, rua, número, bairro, cidade e estado);</li>
-                <li className={styles.tableText}>Escola Atual do Candidado;</li>
-                <li className={styles.tableText}>Período do curso;</li>
-                <li className={styles.tableText}>Informações legais do Responsável;</li>
-                <li className={styles.tableText}>Permissão para Utilizar Cookies;</li>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Nome;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>E-Mail;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Gênero;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Data de Nascimento;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Número do CPF;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Número do RG;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Órgão Expedidor do RG;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Endereço (CEP, rua, número, bairro, cidade e estado);</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Escola Atual do Candidado;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Período do curso;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Informações legais do Responsável;</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Permissão para Utilizar Cookies;</li></Typography>
               </div>
             </div>
             <div>
               <p className={styles.tableTitle}>Motivos das Solicitações</p>
-              <div>
-                <li className={styles.tableText}>Realizar o processo seletivo de admissão dos candidatos para as 150 vagas existentes para o projeto da Escola Germinare.</li>
-                <li className={styles.tableText}>Utilizamos Cookies para distinguir usuários únicos, atribuindo um número gerado aleatoriamente como um identificador com o objetivo de calcular acessos dos visitantes para os relatórios analíticos de sites e para poder entender melhor suas necessidades e interesses, oferecendo um melhor serviço ou informações relacionadas. Por padrão, ele é definido para expirar.</li>
+              <div className={styles.tableDiv}>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Realizar o processo seletivo de admissão dos candidatos para as 150 vagas existentes para o projeto da Escola Germinare.</li></Typography>
+                <Typography variant='TypographyParagraph' color='#323232'><li>Utilizamos Cookies para distinguir usuários únicos, atribuindo um número gerado aleatoriamente como um identificador com o objetivo de calcular acessos dos visitantes para os relatórios analíticos de sites e para poder entender melhor suas necessidades e interesses, oferecendo um melhor serviço ou informações relacionadas. Por padrão, ele é definido para expirar.</li></Typography>
               </div>
             </div>
             </div>
-          </Typography>
         </DialogContent>
         <DialogActions>
           <Button variant='outlined' autoFocus onClick={handleClose}>
