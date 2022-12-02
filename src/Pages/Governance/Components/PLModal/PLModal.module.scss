@@ -7,19 +7,15 @@
 
 .tableDiv{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px
 }
 
 .tableTitle{
-    font-family: Montserrat, sans-serif;
     background-color: #2E3092;
     color: #FFFFFF;
     padding: 5px;
     margin-bottom: 20px;
     text-align: center;
-}
-
-.tableText{
-    font-family: Montserrat, sans-serif;
-    width: 100%;
-    margin-top: 2.5px;
 }

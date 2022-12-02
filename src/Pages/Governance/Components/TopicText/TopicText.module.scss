@@ -1,23 +1,16 @@
-.PLStatementTitleText{
+.divAdjust{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+#boldAdjust{
     font-weight: 700;
-    width: 100%;
-    margin-bottom: 20px;
 }
 
-.PLStatementText{
-    font-size: 16px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.PLStatementSubTopic{
-    font-size: 16px;
-    width: 100%;
-    margin-top: 16px;
-}
-
-.PLStatementBlueBar{
-    width: 370px;
-    height: 10px;
-    background-color: #2E3092;
+.marginBottomDiv{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-bottom: 60px;
 }
