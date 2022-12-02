@@ -1,5 +1,5 @@
-import styles from './certificados.module.scss'
-import { LayoutSection } from '../../../Components'
+import styles from './Certificate.module.scss'
+import { LayoutSection } from '../../../../Components'
 import backgroundSchool from './Assets/backgroundSchool.png'
 import logoEscolasmebro from './Assets/logoEscolasmembro.png'
 import logoEscolasmebro2 from './Assets/logoEscolasmembro2.png'
@@ -7,9 +7,8 @@ import criancaLogo from './Assets/criancasLogo.png'
 import publicaFederal from './Assets/publicaFederal.png'
 import Arrow from './Assets/Arrow.png'
 import cebas from './Assets/cebas.png'
-import useWindowDimensions from '../../../hooks/useWindowDimensions'
 
-export default function Certificados (){
+export default function Certificate(){
     return (
         <div className={styles.certificatesContainer}>
             <LayoutSection src={backgroundSchool} color='rgb(1, 22, 137, 80%)' height='fit-content' shadow={false}>

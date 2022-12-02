@@ -1,7 +1,8 @@
 import "./style.scss";
 import { WelcomeBanner, Typography, ContentSpacer } from "../../Components";
 import { banner, mission } from "./Assets/Images";
-import { Certificates, AcademicsTabs, ImpactPhrase, FamilySchool, Values } from "./Components/index";
+import { AcademicsTabs, ImpactPhrase, FamilySchool, Values } from "./Components";
+import Certificate from "./Components/Certificate/Certificate";
 
 
 export function AboutUs() {
@@ -41,7 +42,7 @@ export function AboutUs() {
                     <img src={mission} alt="alunos da escola" />
                 </section>
                 <div>
-                    <Certificates />
+                    <Certificate/>
                 </div>
 
                 <section style = {{marginTop: '90px', marginBottom: '70px'}}>

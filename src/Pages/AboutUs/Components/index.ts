@@ -1,4 +1,4 @@
-export * from './Certificates'
+export * from './Certificate'
 export * from './ImpactPhrase'
 export * from './Tabs'
 export * from './FamilySchool'
