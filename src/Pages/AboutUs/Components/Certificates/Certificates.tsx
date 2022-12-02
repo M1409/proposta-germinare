@@ -9,8 +9,13 @@ import Arrow from './Assets/Arrow.png'
 import cebas from './Assets/cebas.png'
 import Arrow4 from './Assets/Arrow4.svg'
 
+import useWindowDimensions from '../../../../hooks/useWindowDimensions'
+
+
+
 
 export function Certificates() {
+  const { width } = useWindowDimensions()
   return (
 
     <LayoutSection
@@ -22,7 +27,7 @@ export function Certificates() {
           <Typography
             variant="TypographySubtitle"
             color="white"
-            style={{ paddingTop: "63px", color: "white", marginLeft: "40px" }}
+            style={{ paddingTop: "63px", color: "white", marginLeft: width <=768 ? '40px' : '340px' }}
           >
             Certificados
           </Typography>
