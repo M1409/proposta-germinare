@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './ContactForms.module.scss'
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message';
+import ReCAPTCHA from "react-google-recaptcha"
 import { Typography, Button } from '../../../../Components'
 import formsImage from './Assets/formsImage.png'
 import Snackbar, {SnackbarOrigin } from '@mui/material/Snackbar';
@@ -27,11 +28,13 @@ export function ContactForms() {
       });
     const { vertical, horizontal } = state;
     const [open, setOpen] = React.useState(false);
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const captcha = React.useRef<ReCAPTCHA>(null)
+    const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm();
     const onSubmit = (data: any) => {
         setOpen(true)
         console.log(data)
-        reset() 
+        reset()
+        captcha.current?.reset(); 
     };
     const handleError = () => {
         $('.textfield').removeClass('error')
@@ -82,6 +85,14 @@ export function ContactForms() {
                         <span>Sua Mensagem</span>
                         <textarea className='textfield' id='message' placeholder="Ex: Tenho dúvidas em relação a determinados assuntos, como por exemplo: X, Y e Z." {...register("message", { required: { value: true, message: 'Esse campo é obrigatório.' } })} />
                         <Error reference='message'></Error>
+                    </div>
+                    <div>
+                        <ReCAPTCHA hl='pt-BR' sitekey='6LcDj0ojAAAAAFZ0OQaJi5Pk1ERi-Oi9S3waK0bJ' {...register("captcha", { required: { value: true, message: 'Essa validação é obrigatória.' }})} ref={captcha} onChange={(value)=>{
+                            if (value){
+                                setValue('captcha', value)
+                            }
+                        }} />
+                        <Error reference='captcha'></Error>
                     </div>
                     <Button variant='filled' type='submit' id={styles.btn}>Enviar</Button>
                 </form>

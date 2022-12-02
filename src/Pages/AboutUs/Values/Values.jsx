@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import styles from "./Values.module.scss";
+import { Typography } from "../../../Components";
 
 export function ConnectDots({ cx, cy, fill, brightness = 100 }) {
   return (
@@ -228,8 +229,8 @@ export function Values() {
         </svg>
       </div>
       <div ref={descriptionContainerRef} className={styles.ValueDescriptionContainer}>
-        <h1>{currentValue.name}</h1>
-        <p>{currentValue.description}</p>
+        <Typography variant='TypographySectionTitle' color='#2E3092' width='250px'>{currentValue.name}</Typography>
+        <Typography variant='TypographyParagraph' color='#323232' width='700px'>{currentValue.description}</Typography>
       </div>
     </div>
   );
