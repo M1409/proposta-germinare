@@ -41,8 +41,9 @@ export function Router() {
             <Route path={routes.academic} element={<Academic />} />
             <Route path={routes.admission} element={<Admission />} />
             <Route path={routes.governance} element={<Governance />} />
-            <Route path={routes.news} element={<LatestAndAllNews />}>
-              <Route path=":news-title" element={<NewsInformation />}/>
+            <Route path={routes.news}>
+              <Route index element={<LatestAndAllNews />}/>
+              <Route path=":newsTitle" element={<NewsInformation />}/>
             </Route>
             <Route path={routes.aboutUs} element={<AboutUs />} />
           </Route>

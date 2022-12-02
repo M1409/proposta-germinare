@@ -7,7 +7,7 @@ export type SectionsInfo = Record<
   { name: string; color: string; icon: string }
 >;
 
-const sections: SectionsInfo = {
+export const sections: SectionsInfo = {
     varejo: {
       name: "Varejo",
       color: "#E86339",
