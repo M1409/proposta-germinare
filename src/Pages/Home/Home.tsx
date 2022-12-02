@@ -1,4 +1,5 @@
 import './style.scss'
+import { Error404 } from '../Error404/index'
 import HomeMission from './Assets/Images/HomeMission.png'
 import { Typography } from '../../Components/Typography'
 import {Carousel, BeliefSection, SuportSection, ContactForms, CTATourVirtual} from './Components'
@@ -43,7 +44,7 @@ export function Home() {
                     <ContactForms />
                 </div>
             </div>
-
         </section>
+        
     )
 }

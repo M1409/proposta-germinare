@@ -2,7 +2,7 @@ import { Values } from "./Values";
 import "./style.scss";
 import { WelcomeBanner, Typography } from "../../Components";
 import { banner, mission } from "./Assets/Images";
-import { Certificates } from "./Components";
+import {Certificates} from "./Certificates";
 import { ContentSpacer } from "../../Components";
 
 export function AboutUs() {
@@ -41,11 +41,11 @@ export function AboutUs() {
           </div>
           <img src={mission} alt="alunos da escola" />
         </section>
-        <section>
-          <Certificates />
-        </section>
         <Values />
       </ContentSpacer>
+      <section>
+          <Certificates />
+        </section>
     </>
   );
 }

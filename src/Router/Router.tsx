@@ -30,6 +30,9 @@ const Governance = lazy(() =>
 const AboutUs = lazy(() =>
   import("../Pages").then(({ AboutUs }) => ({ default: AboutUs }))
 );
+const Error404 = lazy(() =>
+  import("../Pages").then(({ Error404 }) => ({ default: Error404 }))
+);
 
 export function Router() {
   return (
@@ -50,7 +53,9 @@ export function Router() {
           <Route path={routes.virtualTour} element={<VirtualTour />} />
         </Route>
         <Route path="/" element={<Navigate to={routes.home} />} />
-        <Route path="*" element={<div>not found</div>} />
+        <Route element={<GeneralRouteWrapper/>}>
+          <Route path="*" element={<Error404 />} />
+        </Route>
       </Routes>
     </Suspense>
   );

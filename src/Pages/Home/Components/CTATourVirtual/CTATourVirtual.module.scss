@@ -25,6 +25,7 @@
     height: 480px;
     width: 100%;
     object-fit: cover;
+    border-radius: 2px;
 }
 
 #fontSizeSetup{
@@ -43,6 +44,7 @@
     opacity: 0.9;
     bottom: 0;
     transition: all 0.2s ease-in-out;
+    border-radius: 2px;
 }
 
 .containerCTATourVirtual:hover .blueDivTourVirtual{

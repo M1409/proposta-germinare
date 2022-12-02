@@ -9,7 +9,7 @@ export function CTATourVirtual() {
     <Typography color='#2E3092' width='325px' variant='TypographySubtitle'>Tour Virtual 360°</Typography>
     <Link to='/home/tour-virtual'>
     <div className={styles.containerCTATourVirtual}>
-            <img src={iconPlay} className={styles.iconPlayTourVirtual}></img>
+            {/* <img src={iconPlay} className={styles.iconPlayTourVirtual}></img> */}
             <img className={styles.imgTourVirtual} src={schoolImage}></img>
             <div className={styles.blueDivTourVirtual}>
                 <img className={styles.iconImg360Tour} src={icon360}></img>
