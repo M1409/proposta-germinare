@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import styles from "./Values.module.scss";
-import { Typography } from "../../../Components";
+import { Typography } from "../../../../Components";
 
-export function ConnectDots({ cx, cy, fill, brightness = 100 }) {
+export default function ConnectDots({ cx, cy, fill, brightness = 100 }) {
   return (
     <circle
       r="5px"
