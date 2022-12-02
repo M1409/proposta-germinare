@@ -3,8 +3,8 @@ import { WelcomeBanner } from '../../Components/WelcomeBanner'
 import { banner, ibook, icase, ilunch, imoney } from './Assets/Images'
 import { Typography } from '../../Components/Typography'
 import CareerSection from './Components/CareerSection/CareerSection'
-import { WhiteCard } from '../../Components/WhiteCard'
-import OurHistory from './Components/OurHistory/OurHistory'
+import { WhiteCard } from '../../Components'
+import { OurHistory } from './Components/OurHistory'
 export function Admission() {
     return (
         <>

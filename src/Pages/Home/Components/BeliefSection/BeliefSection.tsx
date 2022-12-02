@@ -11,14 +11,9 @@ import hands from './Assets/Images/hands.svg'
 import target from './Assets/Images/target.svg'
 import sunny from './Assets/Images/sunny.svg'
 import styles from './BeliefSection.module.scss'
-import useWindowDimensions from "../../../../hooks/useWindowDimensions"
 
 
 export function BeliefSection() {
-
-    const { width } = useWindowDimensions();
-
-
     const cards = [
         {
             "content": "Foco no Detalhe",
