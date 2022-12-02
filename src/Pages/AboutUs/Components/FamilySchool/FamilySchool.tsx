@@ -45,7 +45,7 @@ export function FamilySchool() {
                 {FamilySchoolCards.map(card => (
                     <div className={styles.FamilySchoolCards}>
                         <img src={card.icon} alt="" />
-                        <Typography color="#2E3092" variant="TypographySubtitle" size="24px">
+                        <Typography color="#2E3092" variant="TypographySectionTitle" size="24px">
                             {card.title}
                         </Typography>
                         <Typography variant="TypographyParagraph">

@@ -19,7 +19,7 @@ export function ImpactPhrase() {
                     <div className={styles.ImpactPhraseContainer}>
                         <div className={styles.ImpactPhraseDivider}></div>
                         <div>
-                            <Typography color='white' variant='TypographySubtitle' weight="500" width={width <=769 ? '300px' : '542px'} id= {styles.ImpactPhrase}>
+                            <Typography color='white' variant='TypographySectionTitle' weight="500" width={width <=769 ? '300px' : '542px'} id= {styles.ImpactPhrase}>
                                 “A pessoa para vencer na vida precisa de garra, determinação e pontualidade”.
                             </Typography>
                             <Typography color='white' variant='TypographyParagraph' weight="500" width="309px">

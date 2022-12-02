@@ -1,9 +1,8 @@
-import { Values } from "./Components/Values";
 import "./style.scss";
-import { WelcomeBanner, Typography } from "../../Components";
+import { WelcomeBanner, Typography, ContentSpacer } from "../../Components";
 import { banner, mission } from "./Assets/Images";
-import { Certificates, AcademicsTabs, ImpactPhrase, FamilySchool } from "./Components";
-import { ContentSpacer } from "../../Components";
+import { Certificates, AcademicsTabs, ImpactPhrase, FamilySchool, Values } from "./Components/index";
+
 
 export function AboutUs() {
     return (
@@ -47,7 +46,7 @@ export function AboutUs() {
 
                 <section style = {{marginTop: '90px', marginBottom: '70px'}}>
                     <div style={{ marginBottom: '40px' }}>
-                        <Typography variant="TypographySubtitle" color="#2E3092" width="90%">
+                        <Typography variant="TypographySubtitle" color="#2E3092">
                             O que são Academias Germinare?
                         </Typography>
 
@@ -67,7 +66,6 @@ export function AboutUs() {
                 <div style = {{marginBottom: '70px'}}>
                     <FamilySchool />
                 </div>
-
                 <Values />
             </ContentSpacer>
             <ImpactPhrase />

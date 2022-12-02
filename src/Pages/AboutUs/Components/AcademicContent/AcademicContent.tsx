@@ -18,8 +18,8 @@ export default function AcademicContent({ title, chips, description, src, descri
                 </Typography>
 
                 <div className={styles.ChipsContainer}>
-                    {chips.map((chip) => (
-                        <div className={styles.Chip}>
+                    {chips.map((chip,index) => (
+                        <div className={styles.Chip} key = {index}>
                             <Typography variant="TypographyParagraph" color="#2E3092" weight="700">
                                 {chip}
                             </Typography>
@@ -28,13 +28,13 @@ export default function AcademicContent({ title, chips, description, src, descri
                 </div>
 
                 <div>
-                    <Typography variant="TypographyParagraph" color="black" width={descriptionWidth}>
+                    <Typography variant="TypographyParagraph" width={descriptionWidth}>
                         {description}
                     </Typography>
                 </div>
             </div>
 
-            <img src={src} alt="" />
+            <img src={src} alt="academias germinare" />
 
         </div>
     )
