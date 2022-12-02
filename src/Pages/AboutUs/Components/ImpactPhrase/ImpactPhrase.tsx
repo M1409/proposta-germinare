@@ -1,6 +1,6 @@
 import { LayoutSection } from "../../../../Components"
 import ImpactPhrase_background from './Assets/Images/ImpactPhrase_background.png'
-import ze_mineiro from './Assets/Images/ze_mineiro.png'
+import ze_mineiro from './Assets/Images/ze-mineiro.png'
 import { Typography } from "../../../../Components"
 import styles from './ImpactPhrase.module.scss'
 
@@ -19,7 +19,7 @@ export function ImpactPhrase() {
                     <div className={styles.ImpactPhraseContainer}>
                         <div className={styles.ImpactPhraseDivider}></div>
                         <div>
-                            <Typography color='white' variant='TypographySectionTitle' weight="500" width={width <=769 ? '300px' : '542px'} id= {styles.ImpactPhrase}>
+                            <Typography color='white' variant='TypographySectionTitle' weight="500" width={width <=769 ? '90%' : '70%'} id= {styles.ImpactPhrase}>
                                 “A pessoa para vencer na vida precisa de garra, determinação e pontualidade”.
                             </Typography>
                             <Typography color='white' variant='TypographyParagraph' weight="500" width="309px">

@@ -63,7 +63,7 @@ export function AboutUs() {
                     <AcademicsTabs />
                 </section>
 
-                <div style={{ marginBottom: '70px' }}>
+                <div style={{ marginBottom: '70px', marginTop: '90px' }}>
                     <FamilySchool />
                 </div>
                 <Values />

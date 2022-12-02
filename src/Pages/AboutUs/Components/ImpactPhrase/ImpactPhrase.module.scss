@@ -1,7 +1,9 @@
 .ImpactPhraseSection{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    
+    
 
     .ImpactPhraseDivider{
         height: 58px;
@@ -19,7 +21,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
     .ImpactPhraseSection{
         padding-top: 40px;
         padding-bottom: 40px;
