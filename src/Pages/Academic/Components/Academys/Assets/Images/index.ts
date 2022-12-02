@@ -1,5 +1,0 @@
-export {default as marcas} from './marcas.png'
-export {default as commodities} from './commodities.png'
-export {default as varejo} from './varejo.png'
-export {default as controle} from './controle.png'
-export {default as financas} from './financas.png'

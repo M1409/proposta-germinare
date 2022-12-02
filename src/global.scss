@@ -47,19 +47,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.App{
-	padding-top: 100px;
-}
-.mainContainer{
-	padding: 0 60px;
-	padding-top: 60px;
-}
-@media screen and (max-width: 700px){
-	.mainContainer{
-		padding: 0 30px;
-		padding-top: 30px;
-	}
-}
-a{
-	color: #2D368C;
-}

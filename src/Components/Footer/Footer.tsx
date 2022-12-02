@@ -1,13 +1,8 @@
 import styles from './Footer.module.scss'
 import { ifb, iinsta, itk, iyt } from './Assets/Images/index'
-
-export type FooterProps = {
-
-} & React.HTMLProps<HTMLElement>
-
-export function Footer({...props}: FooterProps) {
+export default function Footer() {
     return (
-        <footer className={styles.footer} {...props}>
+        <footer className={styles.footer}>
             <div className={styles.mainContainer}>
                 <div>
                     <h6 className={styles.title} id={styles.nameTitle}><span>Instituto Germinare</span> <span id={styles.titleLine}>-</span> <span>Escola de Negócios</span></h6>
