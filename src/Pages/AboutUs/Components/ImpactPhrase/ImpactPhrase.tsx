@@ -3,7 +3,6 @@ import ImpactPhrase_background from './Assets/Images/ImpactPhrase_background.png
 import ze_mineiro from './Assets/Images/ze-mineiro.png'
 import { Typography } from "../../../../Components"
 import styles from './ImpactPhrase.module.scss'
-
 import {useWindowDimensions} from "../../../../hooks"
 
 export function ImpactPhrase() {
