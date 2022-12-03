@@ -1,10 +1,10 @@
 export enum routes {
-    academic = "projeto-academico",
-    aboutUs = "sobre-nos",
-    admission = "admissao",
+    academic = "projeto-acadêmico",
+    aboutUs = "sobre-nós",
+    admission = "admissão",
     virtualTour = "tour-virtual",
-    governance = "governanca",
-    news = "noticias",
+    governance = "governança",
+    news = "notícias",
     home = "home"
 }
 
