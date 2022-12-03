@@ -1,0 +1,58 @@
+.menuOptionsContainer {
+  position: relative;
+}
+
+.optionsMenu {
+  width: 150px;
+  padding-left: 10px;
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  height: 0;
+  overflow-y: hidden;
+  transition: ease-in-out 0.5s;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  & > li {
+    & > button {
+      font-size: 14px;
+      background-color: white;
+      border: 0;
+      cursor: pointer;
+      text-align: left;
+      font-weight: bold;
+      color: #b1adad;
+      transition: all .3s ease;
+    }
+    &.selected {
+      & > button {
+        color: #2e3092;
+      }
+    }
+  }
+  & > li:hover button{
+    color: lighten($color: #2e3092, $amount: 20%);
+  }
+}
+
+.optionsMenu.open {
+  height: 260px;
+}
+
+@media (max-width: 380px) {
+  .menuOptionsContainer {
+    position: relative;
+    & > button {
+      padding: 5px 0;
+      width: 100px;
+    }
+  }
+
+  .optionsMenu {
+    top: 50px;
+    right: 0;
+  }
+}

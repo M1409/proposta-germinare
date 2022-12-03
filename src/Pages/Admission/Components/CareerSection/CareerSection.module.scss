@@ -6,12 +6,12 @@ $container-left: 12px;
 
 .mainSection {
     width: 100%;
-    height: 400px;
+    height: fit-content;
     display: flex;
-    margin-bottom: 300px;
+    margin-bottom: 60px;
 
     .titleContainer {
-        height: 100%;
+        min-height: 300px;
         width: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -22,7 +22,7 @@ $container-left: 12px;
             bottom: 0;
             left: calc(20px + 3%);
             bottom: 30px;
-            z-index: 99;
+            z-index: 9;
         }
 
         .backgroundShadow {
@@ -49,7 +49,7 @@ $container-left: 12px;
         gap: 15px;
 
         div {
-            height: calc(100% - 30px);
+            height: 100%;
             width: 50%;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             position: relative;
@@ -90,8 +90,6 @@ $container-left: 12px;
 @media screen and (max-width: 980px) {
     .mainSection {
         flex-direction: column;
-        height: 869px;
-
         .titleContainer,
         .careerContainer {
             width: 100%;
@@ -101,10 +99,10 @@ $container-left: 12px;
             flex-direction: column;
             margin-left: 0;
             margin-top: 12px;
-
+            gap: 25px;
             div {
                 padding-right: 12px;
-                width: calc(100% - 12px - $padding-left);
+                width: 100%;
                 min-height: calc(35% + 100px);
 
                 p {

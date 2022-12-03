@@ -1,0 +1,5 @@
+export {default as banner} from './banner.png'
+export {default as ibook} from './ibook.svg'
+export {default as icase} from './icase.svg'
+export {default as ilunch} from './ilunch.svg'
+export {default as imoney} from './imoney.svg'

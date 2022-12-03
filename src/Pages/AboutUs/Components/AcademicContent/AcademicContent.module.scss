@@ -1,0 +1,50 @@
+.AcademicContentContainer{
+    margin: 46px  0 46px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    img{
+        max-width: 45%;
+    }
+}
+
+
+.ChipsContainer{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    max-width: 520px;
+    gap: 10px;
+}
+
+
+.Chip{
+    width: fit-content;
+    border: 1px solid #2E3092;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .AcademicContentContainer{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 35px;
+        padding: 0 20px;
+
+        img{
+           display: none;
+        }
+        p{
+            width: auto !important;
+        }
+    }
+
+
+    .AcademicContentContainer{
+        margin: 46px  0 46px 0;
+    }
+}

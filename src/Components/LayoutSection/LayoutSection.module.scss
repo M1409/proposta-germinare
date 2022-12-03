@@ -1,16 +1,21 @@
 .LayoutSection {
     opacity: 1;
-    width: 100vw;
+    // width: 100vw;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
 }
 
-.LayoutSection span {
+.LayoutSection .bg {
     display: block;
     height: 100%;
-    position: absolute;
-    width: 100vw
+    width: 100%
 }
 
+.backgroundShadow{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(89.92deg, #000000 7.08%, rgba(0, 0, 0, 0) 96.1%);
+    mix-blend-mode: normal;
+}

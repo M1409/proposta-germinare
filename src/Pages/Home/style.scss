@@ -1,6 +1,53 @@
-.error{
-	border-color: #bf1650;
+.HomeMissionSection {
+  margin-bottom: 60px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
-.error:hover{
-	border-color: #bf1650;
+
+.HomeTextSection {
+  margin-bottom: 50px;
+
+  :first-child {
+    margin-bottom: 20px;
+  }
+}
+.FormsSection {
+  margin: 60px 0;
+}
+@media screen and (max-width: 1070px) {
+  .HomeMissionSection {
+    flex-direction: column;
+    margin: 30px 0;
+    margin-left: 20px;
+
+    img {
+      display: none;
+    }
+  }
+}
+// Carousel Style
+.HomePage .slick-dots {
+  bottom: 25px;
+  .slick-active {
+    div {
+      background-color: #2e3092;
+    }
+  }
+  li:hover:not(.slick-active) div {
+    background-color: lighten($color: #011689, $amount: 40%);
+  }
+}
+.carouselHomeDot {
+  width: 15px;
+  height: 15px !important;
+  background-color: lighten(#272727, 48%);
+  border-radius: 50%;
+}
+//forms
+.error {
+  border-color: #bf1650;
+}
+.error:focus {
+  border-color: #bf1650;
 }

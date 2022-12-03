@@ -1,0 +1,60 @@
+
+.SupportSection {
+  strong.picpay{
+    font-weight: 700;
+    color: #11C76F;
+  }
+  p:first-child {
+    margin-bottom: 36px;
+  }
+
+  .SupportContainer {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  #SupportLegal {
+    margin-top: -20px;
+  }
+
+  .SupportImgs {
+    display: flex;
+    justify-content: space-evenly;
+    img{
+      width: 500px;
+      height: 500px;
+    }
+
+  }
+}
+@media screen and (max-width: 1070px) {
+  .SupportImgs {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    :last-child {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .SupportSection {
+      .SupportContainer {
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+      }
+
+      .SupportButtons {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+        width: fit-content;
+        margin-top: 42px;
+      }
+      .SupportImgs{
+        display: none;
+      }
+    }
+  }
+}

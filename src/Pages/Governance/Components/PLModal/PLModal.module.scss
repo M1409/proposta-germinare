@@ -1,0 +1,21 @@
+.tableContainer{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+
+.tableDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+.tableTitle{
+    background-color: #2E3092;
+    color: #FFFFFF;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}

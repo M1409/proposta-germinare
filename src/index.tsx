@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.scss'
 import App from './App';
-
-
+import { HashRouter as Router } from "react-router-dom";
+import { LazyLoading } from './Pages';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Router>
+    <React.Suspense fallback={<LazyLoading/>}>
+      <App />
+    </React.Suspense>
+  </Router>
 );

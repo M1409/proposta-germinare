@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    gap: 60px;
+    margin-top: 30px;
+    align-items: center;
+    #internship{
+        padding-left: 60px; 
+        border-left: 4px solid #011689;
+    }
+}
+@media screen and (max-width: 700px){
+    .container{
+        flex-direction: column;
+        gap: 30px;
+        align-items: unset;
+        #internship{
+            padding: 0;
+            border: none;
+        }
+    }
+}

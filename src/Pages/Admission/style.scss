@@ -1,0 +1,16 @@
+#admission-whiteCard-container{
+    div{
+        margin-bottom: 20px;
+    }
+}
+#admission .slick-dots{
+    bottom: -50px;
+    .slick-active {
+        div {
+          background-color: #6769be;
+        }
+      }
+      li:hover:not(.slick-active) div {
+        background-color: lighten($color: #011689, $amount: 40%);
+      }
+}
