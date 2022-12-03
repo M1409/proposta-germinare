@@ -54,7 +54,6 @@ const sections: SectionsInfo = {
 };
 
 export function Card({
-  url,
   title,
   section,
   img: { src, alt, height },
@@ -74,7 +73,7 @@ export function Card({
           <img src={icon} />
           <p style={{ color: color }}>{name}</p>
         </div>
-        <Link className={styles.NewsSectionLinkConfig} to={url} >
+        <Link className={styles.NewsSectionLinkConfig} to={title} >
           <p className={styles.NewsSectionTextTitle}>{title}</p>
         </Link>
       </div>

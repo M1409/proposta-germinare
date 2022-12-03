@@ -21,8 +21,7 @@ export function useRouter() {
             href: pathing,
             label: decodeURI(
               path
-                .replace("-", " ")
-                .replace("-", " ")
+                .replaceAll("-", " ")
                 .replace(path[0], path[0].toUpperCase())
             ),
           });

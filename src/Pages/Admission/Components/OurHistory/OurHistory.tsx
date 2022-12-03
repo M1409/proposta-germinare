@@ -6,7 +6,7 @@ import { useWindowDimensions } from "../../../../hooks/useWindowDimensions";
 import { Typography, LayoutSection } from "../../../../Components";
 import styles from "./OurHistory.module.scss";
 import { bg, mother, principal, teacher } from "./Assets/Images";
-export default function OurHistory() {
+export function OurHistory() {
   const { width } = useWindowDimensions();
   const settings = useMemo(() => {
     return {
