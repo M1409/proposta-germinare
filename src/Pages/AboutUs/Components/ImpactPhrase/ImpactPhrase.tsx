@@ -12,7 +12,7 @@ export function ImpactPhrase() {
 
 
     return (
-        <LayoutSection src={ImpactPhrase_background} color='rgba(1, 22, 137, 0.8)' height='fit-content'>
+        <LayoutSection src={ImpactPhrase_background} color='rgba(1, 22, 137, 0.8)' height='320px' id="impactPhrase">
             <div className={styles.ImpactPhraseSection}>
                 <img src={ze_mineiro} alt="zé mineiro" />
                 <div>
