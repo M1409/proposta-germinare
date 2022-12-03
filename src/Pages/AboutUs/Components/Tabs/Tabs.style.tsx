@@ -39,7 +39,9 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
     '& .MuiTabs-flexContainer': {
         justifyContent: 'space-around',
     },
-
+    '& .css-ptiqhd-MuiSvgIcon-root':{
+        fill: 'white'
+    },
     '@media only screen and (max-width: 768px)': {
         '& .MuiTabs-flexContainer':{
             justifyContent: 'normal',

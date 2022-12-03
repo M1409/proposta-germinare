@@ -24,14 +24,17 @@
       cursor: pointer;
       text-align: left;
       font-weight: bold;
-      color: #c8c8c8;
+      color: #b1adad;
+      transition: all .3s ease;
     }
-
     &.selected {
       & > button {
         color: #2e3092;
       }
     }
+  }
+  & > li:hover button{
+    color: lighten($color: #2e3092, $amount: 20%);
   }
 }
 

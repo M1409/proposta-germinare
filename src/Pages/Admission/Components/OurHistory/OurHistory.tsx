@@ -2,11 +2,10 @@ import { useMemo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useWindowDimensions } from "../../../../hooks";
+import { useWindowDimensions } from "../../../../hooks/useWindowDimensions";
 import { Typography, LayoutSection } from "../../../../Components";
 import styles from "./OurHistory.module.scss";
 import { bg, mother, principal, teacher } from "./Assets/Images";
-
 export function OurHistory() {
   const { width } = useWindowDimensions();
   const settings = useMemo(() => {
@@ -20,17 +19,25 @@ export function OurHistory() {
       initialSlide: 0,
       autoplay: true,
       arrows: false,
+      dots: width > 1080 ? false : true,
       autoplaySpeed: 6000,
       pauseOnHover: true,
+      customPaging: () => (
+        <div
+          className="carouselHomeDot"
+          id="ourHistory"
+        >
+        </div>
+      )
     };
   }, [width]);
 
   return (
-    <LayoutSection src={bg} color="rgba(0, 25, 80, .85)" height="630px">
+    <LayoutSection src={bg} color="rgba(0, 25, 80, .85)" height="630px" >
       <Typography color="white" variant="TypographySubtitle" id={styles.title}>
         Nossas histórias
       </Typography>
-      <div className={styles.mainSection}>
+      <div className={styles.mainSection}  id='admission'>
         <Slider {...settings} className={styles.slider}>
           <div className={styles.sliderItem} id="admission-slider-item">
             <div
