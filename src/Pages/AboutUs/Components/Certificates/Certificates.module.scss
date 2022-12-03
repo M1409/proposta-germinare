@@ -4,217 +4,217 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    .containerCards {
+        justify-content: center;
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        padding-bottom: 130px;
+        margin-left: 30px
+    }
+    
+    .certificado {
+        max-width: 260px;
+        height: 217px;
+        width: 100%;
+        background-color: white;
+        margin-top: 50px;
+        border-radius: 2px;
+        box-shadow: -8px 10px 0px 0px rgba(3,14,79,1);
+        padding-right: -10px;
+    }
+    
+    h2 {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        max-width: 227.44px;
+        width: 100%;
+        color: #030E4F;
+        padding-top: 28px;
+    }
+    
+    .teste {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .flex {
+        width: 100%;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    
+    .img {
+        max-width: 100px;
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    
+    .arrow {
+        margin-top: 12px;
+        margin-left: 190px;
+        cursor: pointer;
+    }
+    
+    .arrow2 {
+        margin-top: 0px;
+        margin-left: 190px;
+        cursor: pointer;
+    }
+    
+    .flipContainer {
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+    }
+    
+    .flipper{
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .flipper{
+        position: relative;
+    }
+    .front, .back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    
+    .back{
+        transform: rotateY(180deg);
+    }
+    
+    .switch:checked ~ .flipContainer .flipper {
+        transform: rotateY(180deg);
+      }
+    
+    .switch{
+        display: none;
+    }
+    
+    //2
+    
+    .flipContainer2 {
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+    }
+    
+    .flipper2{
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .flipper2{
+        position: relative;
+    }
+    
+    .switch2:checked ~ .flipContainer2 .flipper2 {
+        transform: rotateY(180deg);
+      }
+    
+    .switch2{
+        display: none;
+    }
+    
+    //3
+    
+    .flipContainer3 {
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+    }
+    
+    .flipper3 {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .flipper3 {
+        position: relative;
+    }
+    
+    .switch3:checked ~ .flipContainer3 .flipper3 {
+        transform: rotateY(180deg);
+      }
+    
+    .switch3{
+        display: none;
+    }
+    
+    //4
+    
+    .flipContainer4 {
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+    }
+    
+    .flipper4 {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .flipper4 {
+        position: relative;
+    }
+    
+    .switch4:checked ~ .flipContainer4 .flipper4 {
+        transform: rotateY(180deg);
+      }
+    
+    .switch4{
+        display: none;
+    }
+    
+    label {
+        margin-bottom: 60px;
+    }
+    
+    .li {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    
+    .contrario {
+        max-width: 256px;
+        width: 80%;
+        font-size: 14px;
+        margin-left: 30px;
+        padding-top: 20px;
+    }
+    
+    .certificado2 {
+        max-width: 280px;
+        height: 240px;
+        width: 100%;
+        background-color: white;
+        margin-top: 50px;
+        border-radius: 2px;
+        box-shadow: -8px 10px 0px 0px rgba(3,14,79,1);
+        padding-right: -10px;
+    }
+    
+    .cFlex {
+        margin-top: 10px;
+        display: flex;
+        font-size: 12px;
+        gap: 5px;
+        font-weight: 600;
+        cursor: pointer;
+    }
 }
 
-.containerCards {
-    justify-content: center;
-    display: flex;
-    max-width: 100%;
-    flex-wrap: wrap;
-    padding-bottom: 130px;
-    margin-left: 30px
-}
-
-.certificado {
-    max-width: 260px;
-    height: 217px;
-    width: 100%;
-    background-color: white;
-    margin-top: 50px;
-    border-radius: 2px;
-    box-shadow: -8px 10px 0px 0px rgba(3,14,79,1);
-    padding-right: -10px;
-}
-
-h2 {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    max-width: 227.44px;
-    width: 100%;
-    color: #030E4F;
-    padding-top: 28px;
-}
-
-.teste {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.flex {
-    width: 100%;
-    margin-left: 40px;
-    margin-top: 20px;
-}
-
-.img {
-    max-width: 100px;
-    width: 100%;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.arrow {
-    margin-top: 12px;
-    margin-left: 190px;
-    cursor: pointer;
-}
-
-.arrow2 {
-    margin-top: 0px;
-    margin-left: 190px;
-    cursor: pointer;
-}
-
-.flipContainer {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-}
-
-.flipper{
-	width: 100%;
-	height: 100%;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-}
-
-.flipper{
-	position: relative;
-}
-.front, .back{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-    backface-visibility: hidden;
-}
-
-.back{
-	transform: rotateY(180deg);
-}
-
-.switch:checked ~ .flipContainer .flipper {
-    transform: rotateY(180deg);
-  }
-
-.switch{
-	display: none;
-}
-
-//2
-
-.flipContainer2 {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-}
-
-.flipper2{
-	width: 100%;
-	height: 100%;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-}
-
-.flipper2{
-	position: relative;
-}
-
-.switch2:checked ~ .flipContainer2 .flipper2 {
-    transform: rotateY(180deg);
-  }
-
-.switch2{
-	display: none;
-}
-
-//3
-
-.flipContainer3 {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-}
-
-.flipper3 {
-	width: 100%;
-	height: 100%;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-}
-
-.flipper3 {
-	position: relative;
-}
-
-.switch3:checked ~ .flipContainer3 .flipper3 {
-    transform: rotateY(180deg);
-  }
-
-.switch3{
-	display: none;
-}
-
-//4
-
-.flipContainer4 {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-}
-
-.flipper4 {
-	width: 100%;
-	height: 100%;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-}
-
-.flipper4 {
-	position: relative;
-}
-
-.switch4:checked ~ .flipContainer4 .flipper4 {
-    transform: rotateY(180deg);
-  }
-
-.switch4{
-	display: none;
-}
-
-label {
-    margin-bottom: 60px;
-}
-
-.li {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.contrario {
-    max-width: 256px;
-    width: 80%;
-    font-size: 14px;
-    margin-left: 30px;
-    padding-top: 20px;
-}
-
-.certificado2 {
-    max-width: 280px;
-    height: 240px;
-    width: 100%;
-    background-color: white;
-    margin-top: 50px;
-    border-radius: 2px;
-    box-shadow: -8px 10px 0px 0px rgba(3,14,79,1);
-    padding-right: -10px;
-}
-
-.cFlex {
-    margin-top: 10px;
-    display: flex;
-    font-size: 12px;
-    gap: 5px;
-    font-weight: 600;
-    cursor: pointer;
-}

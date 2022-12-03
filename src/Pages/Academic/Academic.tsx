@@ -35,7 +35,7 @@ export function Academic() {
         </section>
         <section>
             <Typography variant="TypographySubtitle" color="#2E3092">Disciplinas focadas em gestão de negócios</Typography>
-            <Typography variant="TypographyParagraph">O Instituto Germinare, além de oferecer toda a base curricular do MEC, oferecendo matérias básicas como: português, matemática, história, física, química e biologia contém em sua estrutura <strong>matérias voltadas ao preparo do aluno como profissional</strong>, fazendo com que assim ele esteja preparado para o mercado de trabalho.</Typography>
+            <Typography variant="TypographyParagraph">O Instituto Germinare, além de oferecer toda a base curricular do MEC, oferecendo matérias básicas como: português, matemática, história, física, química e biologia contém em sua estrutura <strong>matérias voltadas ao preparo do aluno como profissional</strong>, fazendo com que assim ele esteja preparado para o mercado de trabalho.<br></br><br></br><strong>Clique em cada seção para saber mais.</strong></Typography>
             <Academys></Academys>
             <Internship></Internship>
         </section>
